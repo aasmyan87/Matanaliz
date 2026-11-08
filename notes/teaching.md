@@ -35,3 +35,4 @@
 - `Books/rosenshine.pdf` — десять принципов обучения.
 - `Books/science-of-learning.pdf` — как работает память и почему важны retrieval practice, интервалы и worked examples.
 - `Books/mathematical-discovery.pdf` — обучение через задачи и открытие, а не через готовые формулировки.
+- `links.md` — внешние курсы, справочники, задачи и методические материалы.
