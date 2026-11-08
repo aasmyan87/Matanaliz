@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">Принцип Архимеда: шесть полных шагов h, остаток и клетка с x</title>
+<desc id="desc">Пример h = 0,3 и x = 2,0: на числовой прямой отмечены кратные h; от 0 до x укладывается шесть полных шагов (1,8), остаток 0,2 меньше h, а x лежит в клетке [6h, 7h) = [1,8; 2,1), поэтому k = 7.</desc>
+<defs>
+<style>
+text{font-family:'Segoe UI',Arial,sans-serif;fill:#172033}
+.math{font-family:Cambria,'Times New Roman',serif}
+.muted{fill:#64748b}
+</style>
+</defs>
+
+<rect width="1600" height="1120" fill="#f3f6fb"/>
+<rect x="24" y="20" width="1552" height="1080" rx="28" fill="#ffffff" stroke="#dbe3ef" stroke-width="2"/>
+
+<text x="60" y="72" font-size="40" font-weight="700">Принцип Архимеда: полные шаги h, остаток и клетка с x</text>
+<text x="60" y="114" font-size="22" class="muted">Зорич, т. 1, гл. II, § 2, п. 3, 6° (с. 80); пример h = 0,3, x = 2,0</text>
+
+<rect x="60" y="142" width="1480" height="112" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+<text x="90" y="180" font-size="21" font-weight="700" fill="#1d4ed8">Формулировка (6°)</text>
+<text x="90" y="232" font-size="27" class="math">Для любого h &gt; 0 и любого x ∈ ℝ существует единственное k ∈ ℤ: (k − 1)h ≤ x &lt; kh.</text>
+
+<rect x="60" y="274" width="1480" height="84" rx="16" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+<text x="90" y="326" font-size="24">Пример: h = 0,3; x = 2,0.   Ищем k: (k − 1)·0,3 ≤ 2,0 &lt; k·0,3.</text>
+
+<!-- клетка, содержащая x -->
+<rect x="984" y="734" width="144" height="52" rx="8" fill="#ffedd5" stroke="#fdba74" stroke-width="2"/>
+
+<!-- числовая прямая -->
+<line x1="90" y1="760" x2="1320" y2="760" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+<g stroke="#94a3b8" stroke-width="2.5">
+<line x1="120" y1="748" x2="120" y2="772"/>
+<line x1="264" y1="748" x2="264" y2="772"/>
+<line x1="408" y1="748" x2="408" y2="772"/>
+<line x1="552" y1="748" x2="552" y2="772"/>
+<line x1="696" y1="748" x2="696" y2="772"/>
+<line x1="840" y1="748" x2="840" y2="772"/>
+<line x1="984" y1="748" x2="984" y2="772"/>
+<line x1="1128" y1="748" x2="1128" y2="772"/>
+<line x1="1272" y1="748" x2="1272" y2="772"/>
+</g>
+<g font-size="20" class="muted" text-anchor="middle">
+<text x="120" y="802">0</text>
+<text x="264" y="802">0,3</text>
+<text x="408" y="802">0,6</text>
+<text x="552" y="802">0,9</text>
+<text x="696" y="802">1,2</text>
+<text x="840" y="802">1,5</text>
+<text x="984" y="802">1,8</text>
+<text x="1128" y="802">2,1</text>
+<text x="1272" y="802">2,4</text>
+</g>
+
+<!-- шаг h -->
+<line x1="120" y1="480" x2="120" y2="500" stroke="#7c3aed" stroke-width="2.5"/>
+<line x1="264" y1="480" x2="264" y2="500" stroke="#7c3aed" stroke-width="2.5"/>
+<line x1="120" y1="480" x2="264" y2="480" stroke="#7c3aed" stroke-width="3"/>
+<text x="192" y="462" text-anchor="middle" font-size="21" font-weight="700" fill="#6d28d9">h = 0,3 (шаг)</text>
+
+<!-- шесть полных шагов -->
+<line x1="120" y1="570" x2="120" y2="620" stroke="#2563eb" stroke-width="2.5"/>
+<line x1="984" y1="570" x2="984" y2="620" stroke="#2563eb" stroke-width="2.5"/>
+<line x1="120" y1="570" x2="984" y2="570" stroke="#2563eb" stroke-width="3"/>
+<text x="552" y="552" text-anchor="middle" font-size="21" font-weight="700" fill="#1d4ed8">6 полных шагов по h: 6h = 1,8</text>
+
+<!-- остаток -->
+<line x1="984" y1="650" x2="984" y2="700" stroke="#059669" stroke-width="2.5"/>
+<line x1="1080" y1="650" x2="1080" y2="700" stroke="#059669" stroke-width="2.5"/>
+<line x1="984" y1="650" x2="1080" y2="650" stroke="#059669" stroke-width="3"/>
+<text x="1092" y="644" font-size="21" font-weight="700" fill="#047857">остаток 0,2 &lt; h</text>
+
+<!-- точка x -->
+<circle cx="1080" cy="760" r="9" fill="#1d4ed8" stroke="#ffffff" stroke-width="3"/>
+<text x="1092" y="730" font-size="24" font-weight="700" fill="#1d4ed8">x = 2,0</text>
+
+<!-- подпись клетки -->
+<text x="1056" y="840" text-anchor="middle" font-size="19" class="muted">клетка [(k−1)h, kh) = [1,8; 2,1)</text>
+
+<!-- итоговая формула -->
+<rect x="60" y="880" width="1480" height="120" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="90" y="934" font-size="30" class="math">(7 − 1)·0,3 = 1,8 ≤ 2,0 &lt; 2,1 = 7·0,3</text>
+<text x="90" y="974" font-size="20" class="muted">k = 7; k − 1 = 6 полных шагов; остаток x − 6h = 0,2 &lt; 0,3 = h; следующее кратное 7h = 2,1.</text>
+
+<text x="60" y="1046" font-size="19" class="muted">Единственность: x лежит ровно в одной клетке [nh, (n+1)h).</text>
+</svg>

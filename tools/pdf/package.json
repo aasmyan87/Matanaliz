@@ -6,6 +6,8 @@
   "dependencies": {
     "@napi-rs/canvas": "^1.1.0",
     "@napi-rs/canvas-win32-x64-msvc": "^1.1.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@resvg/resvg-js-win32-x64-msvc": "^2.6.2",
     "pdfjs-dist": "^6.5.438"
   }
 }

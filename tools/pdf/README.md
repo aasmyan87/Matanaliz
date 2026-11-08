@@ -39,6 +39,14 @@ node tools/pdf/render.mjs "Books/Курс дифференц. и интегр. �
 
 PNG здесь — временный файл для просмотра, а не чертёж проекта.
 
+## Предпросмотр SVG
+
+```
+node tools/pdf/svg-preview.mjs "Diagrams/принцип-архимеда-шаги-и-клетка.svg" preview.png 1600
+```
+
+PNG — временный, для проверки вёрстки; в `Diagrams/` он не сохраняется.
+
 ## DJVU
 
 Книги в DJVU конвертируются через DjVuLibre (`C:\Program Files (x86)\DjVuLibre\ddjvu.exe`):
