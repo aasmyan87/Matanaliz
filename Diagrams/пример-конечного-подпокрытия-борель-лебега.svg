@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+<title id="title">Лемма Бореля – Лебега: из бесконечного покрытия отрезка [0,1] выбираются шесть интервалов</title>
+<desc id="desc">Числовая прямая с отрезком [0,1]. Показаны шесть интервалов U_k = (0,2k − 0,12; 0,2k + 0,12), k = 0,…,5, покрывающие [0,1]. Цветные куски оси показывают, какой интервал покрывает соответствующую часть отрезка.</desc>
+<defs>
+<style>
+text { font-family: 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+.math { font-family: Cambria, 'Times New Roman', serif; }
+.muted { fill: #64748b; }
+</style>
+</defs>
+
+<rect width="1600" height="820" fill="#f4f7fb"/>
+<rect x="30" y="25" width="1540" height="770" rx="24" fill="#ffffff" stroke="#dbe3ef" stroke-width="2"/>
+
+<text x="70" y="78" font-size="34" font-weight="700">Лемма Бореля – Лебега: из бесконечного покрытия — шесть интервалов</text>
+<text x="70" y="114" font-size="19" class="muted">Зорич, т. 1, гл. II, § 3, п. 2 (с. 101–103). Пример: U_x = (x − 0,12; x + 0,12), x ∈ [0,1]</text>
+
+<!-- вертикальные линии в точках переключения -->
+<g stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 8">
+  <line x1="370" y1="145" x2="370" y2="560"/>
+  <line x1="570" y1="145" x2="570" y2="560"/>
+  <line x1="770" y1="145" x2="770" y2="560"/>
+  <line x1="970" y1="145" x2="970" y2="560"/>
+  <line x1="1170" y1="145" x2="1170" y2="560"/>
+</g>
+
+<!-- интервалы -->
+<g>
+  <rect x="150" y="160" width="240" height="26" rx="4" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="173" r="5" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="390" cy="173" r="5" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="270" y="178" font-size="14" fill="#1d4ed8" class="math" text-anchor="middle">U₀ = (−0,12; 0,12)</text>
+</g>
+<g>
+  <rect x="350" y="215" width="240" height="26" rx="4" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="2"/>
+  <circle cx="350" cy="228" r="5" fill="#ffffff" stroke="#0891b2" stroke-width="2.5"/>
+  <circle cx="590" cy="228" r="5" fill="#ffffff" stroke="#0891b2" stroke-width="2.5"/>
+  <text x="470" y="233" font-size="14" fill="#0e7490" class="math" text-anchor="middle">U₁ = (0,08; 0,32)</text>
+</g>
+<g>
+  <rect x="550" y="270" width="240" height="26" rx="4" fill="#059669" fill-opacity="0.12" stroke="#059669" stroke-width="2"/>
+  <circle cx="550" cy="283" r="5" fill="#ffffff" stroke="#059669" stroke-width="2.5"/>
+  <circle cx="790" cy="283" r="5" fill="#ffffff" stroke="#059669" stroke-width="2.5"/>
+  <text x="670" y="288" font-size="14" fill="#047857" class="math" text-anchor="middle">U₂ = (0,28; 0,52)</text>
+</g>
+<g>
+  <rect x="750" y="325" width="240" height="26" rx="4" fill="#d97706" fill-opacity="0.12" stroke="#d97706" stroke-width="2"/>
+  <circle cx="750" cy="338" r="5" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+  <circle cx="990" cy="338" r="5" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+  <text x="870" y="343" font-size="14" fill="#b45309" class="math" text-anchor="middle">U₃ = (0,48; 0,72)</text>
+</g>
+<g>
+  <rect x="950" y="380" width="240" height="26" rx="4" fill="#dc2626" fill-opacity="0.12" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="950" cy="393" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <circle cx="1190" cy="393" r="5" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="1070" y="398" font-size="14" fill="#b91c1c" class="math" text-anchor="middle">U₄ = (0,68; 0,92)</text>
+</g>
+<g>
+  <rect x="1150" y="435" width="240" height="26" rx="4" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="1150" cy="448" r="5" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <circle cx="1390" cy="448" r="5" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="1270" y="453" font-size="14" fill="#6d28d9" class="math" text-anchor="middle">U₅ = (0,88; 1,12)</text>
+</g>
+
+<!-- ось -->
+<line x1="120" y1="560" x2="1420" y2="560" stroke="#94a3b8" stroke-width="4"/>
+
+<!-- цветные куски оси: каждый лежит в соответствующем интервале -->
+<line x1="270" y1="560" x2="370" y2="560" stroke="#2563eb" stroke-width="12"/>
+<line x1="370" y1="560" x2="570" y2="560" stroke="#0891b2" stroke-width="12"/>
+<line x1="570" y1="560" x2="770" y2="560" stroke="#059669" stroke-width="12"/>
+<line x1="770" y1="560" x2="970" y2="560" stroke="#d97706" stroke-width="12"/>
+<line x1="970" y1="560" x2="1170" y2="560" stroke="#dc2626" stroke-width="12"/>
+<line x1="1170" y1="560" x2="1270" y2="560" stroke="#7c3aed" stroke-width="12"/>
+
+<!-- деления и подписи оси -->
+<g stroke="#94a3b8" stroke-width="2">
+  <line x1="270" y1="552" x2="270" y2="568"/>
+  <line x1="370" y1="552" x2="370" y2="568"/>
+  <line x1="470" y1="552" x2="470" y2="568"/>
+  <line x1="570" y1="552" x2="570" y2="568"/>
+  <line x1="670" y1="552" x2="670" y2="568"/>
+  <line x1="770" y1="552" x2="770" y2="568"/>
+  <line x1="870" y1="552" x2="870" y2="568"/>
+  <line x1="970" y1="552" x2="970" y2="568"/>
+  <line x1="1070" y1="552" x2="1070" y2="568"/>
+  <line x1="1170" y1="552" x2="1170" y2="568"/>
+  <line x1="1270" y1="552" x2="1270" y2="568"/>
+</g>
+
+<g font-size="14" class="muted" text-anchor="middle">
+  <text x="370" y="540">0,1</text>
+  <text x="570" y="540">0,3</text>
+  <text x="770" y="540">0,5</text>
+  <text x="970" y="540">0,7</text>
+  <text x="1170" y="540">0,9</text>
+</g>
+
+<g font-size="18" text-anchor="middle">
+  <text x="270" y="596">0,0</text>
+  <text x="470" y="596">0,2</text>
+  <text x="670" y="596">0,4</text>
+  <text x="870" y="596">0,6</text>
+  <text x="1070" y="596">0,8</text>
+  <text x="1270" y="596">1,0</text>
+</g>
+
+<!-- акценты в точках переключения -->
+<g fill="#334155">
+  <circle cx="370" cy="560" r="5"/>
+  <circle cx="570" cy="560" r="5"/>
+  <circle cx="770" cy="560" r="5"/>
+  <circle cx="970" cy="560" r="5"/>
+  <circle cx="1170" cy="560" r="5"/>
+</g>
+
+<text x="70" y="648" font-size="20">Цветной кусок оси лежит в интервале того же цвета: [0; 0,1] ⊂ U₀, [0,1; 0,3] ⊂ U₁, …, [0,9; 1] ⊂ U₅.</text>
+<text x="70" y="682" font-size="18" class="muted">Соседние интервалы перекрываются, поэтому границы 0,1; 0,3; …; 0,9 покрыты дважды.</text>
+<text x="70" y="716" font-size="18" class="muted">Исходное семейство {U_x : x ∈ [0,1]} несчётно; лемма позволяет выбрать из него конечное подсемейство — здесь достаточно шести интервалов.</text>
+<text x="70" y="750" font-size="16" class="muted">Проверка: для любого t ∈ [0,1] найдётся k ∈ {0,…,5} с |t − 0,2k| ≤ 0,1 &lt; 0,12, то есть t ∈ U_k.</text>
+</svg>
