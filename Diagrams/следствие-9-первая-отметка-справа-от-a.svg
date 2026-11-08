@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+<title id="title">Следствие 9°: почему опираются на левый конец a и берут первую отметку сетки m/n справа от него</title>
+<desc id="desc">Верхний рисунок: a = 1,4, b = 2,1, шаг сетки 1/n = 1/2. Точка a лежит в клетке [1; 1,5), правый конец которой m/n = 3/2 — первая отметка сетки справа от a; расстояние r − a = 0,1 меньше шага 0,5, а шаг меньше зазора b − a = 0,7. Нижний рисунок: тот же a = 1,4, но b = 1,55 и шаг 1/8; первая отметка 1,5 попадает в интервал (a, b), а следующая 1,625 — уже нет, поэтому m нужно брать наименьшим.</desc>
+<defs>
+<style>
+text{font-family:'Segoe UI',Arial,sans-serif;fill:#172033}
+.math{font-family:Cambria,'Times New Roman',serif}
+.muted{fill:#64748b}
+.blue{fill:#1d4ed8}
+.orange{fill:#c2410c}
+.green{fill:#047857}
+.red{fill:#dc2626}
+.onDark{fill:#ffffff}
+</style>
+</defs>
+
+<rect width="1600" height="1260" fill="#f3f6fb"/>
+<rect x="24" y="20" width="1552" height="1216" rx="28" fill="#ffffff" stroke="#dbe3ef" stroke-width="2"/>
+
+<text x="72" y="84" font-size="40" font-weight="700">Следствие 9°: почему опираемся на левый конец a</text>
+<text x="72" y="126" font-size="22" class="muted">Ищем рациональное r между a и b: берём сетку с шагом 1/n и первую её отметку справа от a</text>
+
+<rect x="60" y="150" width="1480" height="96" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+<text x="92" y="186" font-size="20" font-weight="700" class="blue">Зорич, т. 1, гл. II, § 2, п. 3, с. 81 — следствие 9°</text>
+<text x="92" y="226" font-size="28" class="math">a &lt; b &#8658; &#8707; r &#8712; &#8474;:  a &lt; r &lt; b</text>
+
+<rect x="60" y="266" width="464" height="136" rx="16" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+<circle cx="106" cy="306" r="22" fill="#ea580c"/>
+<text x="106" y="315" text-anchor="middle" font-size="24" font-weight="700" class="onDark">1</text>
+<text x="144" y="314" font-size="24" font-weight="700">Сетка мельче зазора</text>
+<text x="90" y="370" font-size="27" class="math">1/n &lt; b &#8722; a</text>
+<text x="90" y="398" font-size="18" class="muted">следствие 7° при &#949; = b &#8722; a</text>
+
+<rect x="548" y="266" width="464" height="136" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+<circle cx="594" cy="306" r="22" fill="#2563eb"/>
+<text x="594" y="315" text-anchor="middle" font-size="24" font-weight="700" class="onDark">2</text>
+<text x="632" y="314" font-size="24" font-weight="700">Первая отметка справа</text>
+<text x="578" y="370" font-size="27" class="math">(m &#8722; 1)/n &#8804; a &lt; m/n</text>
+<text x="578" y="398" font-size="18" class="muted">m — наименьшее целое с m/n &gt; a</text>
+
+<rect x="1036" y="266" width="504" height="136" rx="16" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="2"/>
+<circle cx="1082" cy="306" r="22" fill="#059669"/>
+<text x="1082" y="315" text-anchor="middle" font-size="24" font-weight="700" class="onDark">3</text>
+<text x="1120" y="314" font-size="24" font-weight="700">До b не дотягивает</text>
+<text x="1066" y="370" font-size="27" class="math">a &lt; m/n &#8804; a + 1/n &lt; b</text>
+<text x="1066" y="398" font-size="18" class="muted">ведь r &#8722; a &lt; 1/n &lt; b &#8722; a</text>
+
+<text x="72" y="452" font-size="23" font-weight="700">Рисунок 1. Рабочий пример: a = 1,4, b = 2,1, шаг 1/n = 1/2, m = 3, r = 3/2</text>
+<text x="72" y="482" font-size="20" class="muted">a попадает в клетку [1; 1,5); её правый конец 3/2 — первая отметка сетки справа от a</text>
+
+<rect x="324.44" y="500" width="361.11" height="70" rx="10" fill="#dbeafe" opacity="0.85" stroke="#60a5fa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="505" y="530" text-anchor="middle" font-size="20" font-weight="700" fill="#1e40af">клетка [(m&#8722;1)/n, m/n) = [1; 1,5)</text>
+<text x="505" y="554" text-anchor="middle" font-size="16" fill="#1e40af">это ровно один шаг 1/2 = 0,5</text>
+
+<line x1="613.33" y1="570" x2="1118.89" y2="570" stroke="#fdba74" stroke-width="16" opacity="0.6" stroke-linecap="round"/>
+<line x1="180" y1="570" x2="1480" y2="570" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+
+<g stroke="#94a3b8" stroke-width="2.5">
+<line x1="324.44" y1="570" x2="324.44" y2="584"/>
+<line x1="685.56" y1="570" x2="685.56" y2="584"/>
+<line x1="1046.67" y1="570" x2="1046.67" y2="584"/>
+<line x1="1407.78" y1="570" x2="1407.78" y2="584"/>
+</g>
+<g font-size="18" class="muted" text-anchor="middle">
+<text x="324.44" y="604">1</text>
+<text x="1046.67" y="604">2</text>
+<text x="1407.78" y="604">5/2</text>
+</g>
+
+<circle cx="324.44" cy="570" r="4" fill="#94a3b8"/>
+<circle cx="1046.67" cy="570" r="4" fill="#94a3b8"/>
+<circle cx="1407.78" cy="570" r="4" fill="#94a3b8"/>
+
+<circle cx="613.33" cy="570" r="9" fill="#ffffff" stroke="#ea580c" stroke-width="4"/>
+<circle cx="1118.89" cy="570" r="9" fill="#ffffff" stroke="#ea580c" stroke-width="4"/>
+<circle cx="685.56" cy="570" r="10" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+
+<text x="600" y="640" text-anchor="end" font-size="22" font-weight="700" class="orange">a = 1,4</text>
+<text x="685.56" y="640" text-anchor="middle" font-size="22" font-weight="700" class="blue">r = 3/2</text>
+<text x="1118.89" y="640" text-anchor="middle" font-size="22" font-weight="700" class="orange">b = 2,1</text>
+
+<g stroke="#2563eb" stroke-width="2.5">
+<line x1="613.33" y1="660" x2="613.33" y2="684"/>
+<line x1="974.44" y1="660" x2="974.44" y2="684"/>
+</g>
+<line x1="613.33" y1="672" x2="974.44" y2="672" stroke="#2563eb" stroke-width="3"/>
+<text x="984" y="679" font-size="20" font-weight="700" class="blue">1/n = 0,5</text>
+
+<g stroke="#c2410c" stroke-width="2.5">
+<line x1="613.33" y1="700" x2="613.33" y2="724"/>
+<line x1="1118.89" y1="700" x2="1118.89" y2="724"/>
+</g>
+<line x1="613.33" y1="712" x2="1118.89" y2="712" stroke="#c2410c" stroke-width="3"/>
+<text x="1128.89" y="719" font-size="20" font-weight="700" class="orange">b &#8722; a = 0,7</text>
+
+<text x="72" y="764" font-size="21" class="math">Проверка:  r &#8722; a = 0,1 &lt; 1/n = 0,5 &lt; b &#8722; a = 0,7,  значит  r = 1,5 &lt; b = 2,1.</text>
+
+<text x="72" y="812" font-size="23" font-weight="700">Рисунок 2. Почему m наименьшее: тот же a = 1,4, но b = 1,55 и шаг 1/8</text>
+<text x="72" y="842" font-size="20" class="muted">первая отметка справа от a — внутри (a, b), следующая — уже нет</text>
+
+<rect x="396.67" y="850" width="361.11" height="70" rx="10" fill="#dbeafe" opacity="0.85" stroke="#60a5fa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="577" y="880" text-anchor="middle" font-size="20" font-weight="700" fill="#1e40af">клетка [1,375; 1,5) — один шаг 1/8</text>
+<text x="577" y="904" text-anchor="middle" font-size="16" fill="#1e40af">первая отметка справа от a — это 1,5</text>
+
+<line x1="468.89" y1="920" x2="902.22" y2="920" stroke="#fdba74" stroke-width="16" opacity="0.6" stroke-linecap="round"/>
+<line x1="180" y1="920" x2="1480" y2="920" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+
+<g stroke="#94a3b8" stroke-width="2.5">
+<line x1="396.67" y1="920" x2="396.67" y2="934"/>
+<line x1="757.78" y1="920" x2="757.78" y2="934"/>
+<line x1="1118.89" y1="920" x2="1118.89" y2="934"/>
+</g>
+<g font-size="18" class="muted" text-anchor="middle">
+<text x="396.67" y="954">1,375</text>
+<text x="757.78" y="954">1,5</text>
+<text x="1118.89" y="954">1,625</text>
+</g>
+
+<circle cx="396.67" cy="920" r="4" fill="#94a3b8"/>
+<circle cx="1118.89" cy="920" r="4" fill="#94a3b8"/>
+
+<circle cx="468.89" cy="920" r="9" fill="#ffffff" stroke="#ea580c" stroke-width="4"/>
+<circle cx="902.22" cy="920" r="9" fill="#ffffff" stroke="#ea580c" stroke-width="4"/>
+<circle cx="757.78" cy="920" r="10" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+
+<text x="456" y="988" text-anchor="end" font-size="22" font-weight="700" class="orange">a = 1,4</text>
+<text x="757.78" y="988" text-anchor="middle" font-size="22" font-weight="700" class="blue">r = 12/8 = 1,5</text>
+<text x="902.22" y="988" text-anchor="middle" font-size="22" font-weight="700" class="orange">b = 1,55</text>
+<text x="1118.89" y="988" text-anchor="middle" font-size="20" font-weight="700" class="red">13/8 = 1,625</text>
+
+<rect x="60" y="1016" width="1480" height="64" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+<text x="92" y="1056" font-size="20">Если взять m = 13, то 13/8 = 1,625 &gt; b = 1,55: рациональное «перелетело» через правый конец. Поэтому нужно именно наименьшее m.</text>
+
+<rect x="60" y="1092" width="1480" height="76" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="92" y="1128" font-size="19">Почему у Зорича слева &#8804;, а не &lt;: точка a может сама стоять на сетке. Пример: a = 1,5, b = 2,1, n = 2, m = 4.</text>
+<text x="92" y="1154" font-size="19" class="muted">Тогда (m &#8722; 1)/n = 3/2 = a — равенство; и всё равно r = m/n = 2 &#8712; (1,5; 2,1).</text>
+
+<text x="72" y="1204" font-size="18" class="muted">Чертёж показывает механизм на двух примерах; в доказательстве те же шаги повторяются для произвольных a &lt; b.</text>
+</svg>
