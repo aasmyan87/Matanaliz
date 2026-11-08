@@ -5,6 +5,9 @@ Books/
 *.png
 
 # Служебное
+.venv/
+.pnpm-store/
+node_modules/
 Thumbs.db
 .DS_Store
 *.tmp

@@ -1,0 +1,9 @@
+{
+  "name": "mathematics-pdf-tools",
+  "private": true,
+  "type": "module",
+  "description": "Поиск по PDF-книгам для сверки формулировок и страниц",
+  "dependencies": {
+    "pdfjs-dist": "^6.5.438"
+  }
+}
