@@ -26,6 +26,25 @@ async function pageText(n) {
   return content.items.map((i) => i.str + (i.hasEOL ? '\n' : ' ')).join('');
 }
 
+if (argv[1] === '--meta') {
+  const meta = await doc.getMetadata();
+  const xmp = meta.metadata;
+  const pick = (key) => {
+    try { return xmp ? xmp.get(key) : null; } catch { return null; }
+  };
+  console.log(JSON.stringify({
+    info: meta.info ?? {},
+    xmp: xmp ? { title: pick('dc:title'), creator: pick('dc:creator'), subject: pick('dc:description') } : null,
+  }, null, 2));
+  process.exit(0);
+}
+
+if (argv[1] === '--outline') {
+  const outline = await doc.getOutline();
+  console.log(JSON.stringify(outline ?? [], null, 2).slice(0, 4000));
+  process.exit(0);
+}
+
 if (argv[1] === '--page') {
   const n = Number(argv[2]);
   if (!Number.isInteger(n) || n < 1 || n > doc.numPages) {

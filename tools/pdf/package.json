@@ -4,6 +4,8 @@
   "type": "module",
   "description": "Поиск по PDF-книгам для сверки формулировок и страниц",
   "dependencies": {
+    "@napi-rs/canvas": "^1.1.0",
+    "@napi-rs/canvas-win32-x64-msvc": "^1.1.0",
     "pdfjs-dist": "^6.5.438"
   }
 }
