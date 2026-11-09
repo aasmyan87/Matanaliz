@@ -1,6 +1,6 @@
 # Полезные ссылки
 
-Проверены 2026-11-08. Ссылки вспомогательные к Зоричу: другой разбор, доказательство, задачи или картинка к конкретному месту. Использовать точечно: 1–2 ссылки по делу, с объяснением, зачем она нужна, а не длинным списком вместо разбора.
+Проверены 2026-11-08, новые источники добавлены 2026-11-09. Ссылки вспомогательные к Зоричу: другой разбор, доказательство, задачи или картинка к конкретному месту. Использовать точечно: 1–2 ссылки по делу, с объяснением, зачем она нужна, а не длинным списком вместо разбора.
 
 ## Матанализ
 
@@ -13,6 +13,7 @@
 | [CLP Calculus (UBC)](https://www.math.ubc.ca/~CLP/) | курс с задачами и подробными решениями |
 | [Active Calculus](https://activecalculus.org/) | обучение через активности и графики |
 | [OpenStax Calculus Vol. 1](https://openstax.org/details/books/calculus-volume-1) | открытый учебник, много прикладных примеров |
+| [An Infinite Descent into Pure Mathematics](https://infinitedescent.org/) | открытый учебник по логике, доказательствам и вещественным числам; версия 0.7 предварительная, CC BY-SA 4.0; локальная копия в `Books/` |
 | [Khan Academy: Calculus 1](https://www.khanacademy.org/math/calculus-1) | быстрое повторение школьной базы |
 
 ## Справочники и доказательства
@@ -46,6 +47,7 @@
 |---|---|
 | [Rosenshine, Principles of Instruction](https://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf) | малые шаги, проверка понимания, модели |
 | [Deans for Impact: The Science of Learning](https://deansforimpact.org/resources/the-science-of-learning/) | retrieval practice, интервалы, worked examples |
+| [What Works Clearinghouse: Organizing Instruction and Study to Improve Student Learning](https://ies.ed.gov/ncee/wwc/PracticeGuide/1) | интервальное повторение, чередование примеров с практикой и объяснительные вопросы; локальная PDF-копия в `Books/` |
 | [Retrieval Practice](https://retrievalpractice.org/) | практика извлечения из памяти |
 | [The Learning Scientists](https://www.learningscientists.org/) | краткие обзоры исследований об учении |
 | [CMU Eberly Center](https://www.cmu.edu/teaching/) | методические руководства для преподавания |
