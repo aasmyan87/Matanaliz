@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+<title id="title">Следствие 7°, чертёж 1: кратное nε больше единицы</title>
+<desc id="desc">Принцип Архимеда с h=ε=0,4 и x=1 помещает единицу в ячейку [(n−1)ε,nε). На числовой прямой два полных шага дают 0,8, точка 1 лежит внутри следующей ячейки до 1,2=3ε, поэтому n=3 и 1&lt; nε.</desc>
+<defs>
+  <style>
+    text{font-family:'Segoe UI',Arial,sans-serif;fill:#172033}
+    .math{font-family:Cambria,'Times New Roman',serif}
+    .muted{fill:#5b6678}
+  </style>
+  <marker id="axis" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#334155"/></marker>
+  <marker id="blue" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto-start-reverse"><path d="M0 0L12 6L0 12z" fill="#2563eb"/></marker>
+</defs>
+<rect width="1800" height="1120" fill="#eef3f9"/>
+<rect x="24" y="24" width="1752" height="1072" rx="30" fill="#fff" stroke="#d7e0eb" stroke-width="3"/>
+<text x="72" y="92" font-size="47" font-weight="700">1. Принцип Архимеда даёт nε &gt; 1</text>
+<text x="74" y="140" font-size="27" class="muted">Применяем 6° с шагом h = ε = 0,4 и числом x = 1</text>
+
+<rect x="68" y="174" width="1664" height="210" rx="22" fill="#edf6ff" stroke="#bdd8f6" stroke-width="3"/>
+<text x="108" y="224" font-size="29" font-weight="700" fill="#1d4ed8">Общая ячейка по принципу Архимеда</text>
+<text x="108" y="282" font-size="37" class="math">(k − 1)ε ≤ 1 &lt; kε</text>
+<text x="580" y="282" font-size="28" class="math">Поскольку 1 &lt; kε и ε &gt; 0, k &gt; 0; обозначим n := k ∈ ℕ.</text>
+<text x="108" y="340" font-size="28" class="math">Тогда получаем  (n − 1)ε ≤ 1 &lt; nε.  Нужна именно правая часть: 1 &lt; nε.</text>
+
+<text x="76" y="456" font-size="32" font-weight="700">Числовой пример: ε = 0,4, n = 3</text>
+<text x="78" y="496" font-size="24" class="muted">Масштаб оси: 1 единица = 900 px. Подсвечена ячейка [(n−1)ε; nε) = [0,8; 1,2).</text>
+
+<!-- h bracket: from 0 to epsilon -->
+<line x1="220" y1="556" x2="580" y2="556" stroke="#2563eb" stroke-width="4" marker-start="url(#blue)" marker-end="url(#blue)"/>
+<text x="400" y="542" text-anchor="middle" font-size="26" font-weight="700" fill="#1d4ed8">h = ε = 0,4</text>
+
+<!-- Archimedean cell -->
+<rect x="940" y="588" width="360" height="86" rx="14" fill="#fff0cc" stroke="#eab84b" stroke-width="3"/>
+<text x="1120" y="618" text-anchor="middle" font-size="23" font-weight="700" fill="#92400e">ячейка [(n−1)ε; nε)</text>
+<text x="1120" y="650" text-anchor="middle" font-size="22" fill="#92400e">[2ε; 3ε) = [0,8; 1,2)</text>
+<line x1="200" y1="650" x2="1500" y2="650" stroke="#334155" stroke-width="5" marker-end="url(#axis)"/>
+<g stroke="#64748b" stroke-width="3">
+  <path d="M220 628v44M580 628v44M940 628v44M1300 628v44"/>
+</g>
+<line x1="1120" y1="574" x2="1120" y2="670" stroke="#b45309" stroke-width="4" stroke-dasharray="9 7"/>
+<circle cx="1120" cy="650" r="12" fill="#b45309" stroke="#fff" stroke-width="4"/>
+<g font-size="25" text-anchor="middle" class="muted">
+  <text x="220" y="716">0</text>
+  <text x="580" y="716">ε = 0,4</text>
+  <text x="940" y="716">2ε = 0,8</text>
+  <text x="1300" y="716">3ε = 1,2</text>
+</g>
+<text x="1120" y="570" text-anchor="middle" font-size="27" font-weight="700" fill="#92400e">x = 1</text>
+
+<line x1="220" y1="778" x2="940" y2="778" stroke="#0f766e" stroke-width="10"/>
+<path d="M220 762v32M940 762v32" stroke="#0f766e" stroke-width="4"/>
+<text x="580" y="824" text-anchor="middle" font-size="27" font-weight="700" fill="#0f766e">2 полных шага: 2ε = 0,8</text>
+<line x1="940" y1="866" x2="1120" y2="866" stroke="#d97706" stroke-width="10"/>
+<path d="M940 850v32M1120 850v32" stroke="#d97706" stroke-width="4"/>
+<text x="1030" y="912" text-anchor="middle" font-size="26" font-weight="700" fill="#b45309">остаток 1 − 2ε = 0,2 &lt; ε</text>
+
+<rect x="68" y="952" width="1664" height="94" rx="18" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="3"/>
+<text x="106" y="1012" font-size="34" class="math" font-weight="700">2·0,4 = 0,8 ≤ 1 &lt; 1,2 = 3·0,4,  поэтому  1 &lt; nε.</text>
+</svg>

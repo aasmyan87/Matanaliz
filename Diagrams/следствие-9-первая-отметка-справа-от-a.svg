@@ -44,7 +44,7 @@ text{font-family:'Segoe UI',Arial,sans-serif;fill:#172033}
 <text x="1082" y="315" text-anchor="middle" font-size="24" font-weight="700" class="onDark">3</text>
 <text x="1120" y="314" font-size="24" font-weight="700">До b не дотягивает</text>
 <text x="1066" y="370" font-size="27" class="math">a &lt; m/n &#8804; a + 1/n &lt; b</text>
-<text x="1066" y="398" font-size="18" class="muted">ведь r &#8722; a &lt; 1/n &lt; b &#8722; a</text>
+<text x="1066" y="398" font-size="18" class="muted">ведь r &#8722; a &#8804; 1/n &lt; b &#8722; a</text>
 
 <text x="72" y="452" font-size="23" font-weight="700">Рисунок 1. Рабочий пример: a = 1,4, b = 2,1, шаг 1/n = 1/2, m = 3, r = 3/2</text>
 <text x="72" y="482" font-size="20" class="muted">a попадает в клетку [1; 1,5); её правый конец 3/2 — первая отметка сетки справа от a</text>

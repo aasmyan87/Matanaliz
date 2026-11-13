@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-<title id="title">Лемма Бореля – Лебега: вложенные «плохие» отрезки и интервал U, содержащий предельную точку c</title>
-<desc id="desc">Числовой пример: c = 2/3, U = (0,6; 0,8). Вложенные отрезки I1 ⊃ I2 ⊃ … ⊃ I5 сходятся к c. Длина I5 равна 1/16, что меньше ε = 1/15, поэтому I5 целиком лежит в U.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1400" viewBox="0 0 1600 1400" role="img" aria-labelledby="title desc">
+<title id="title">Покрывающая система интервалов и доказательство леммы Бореля – Лебега</title>
+<desc id="desc">Верхняя схема показывает отрезок I1=[0,1] и семейство S всех интервалов Ux=(x−0,14;x+0,14), x в [0,1]. Показаны шесть интервалов этого семейства, покрывающих I1. Нижняя схема иллюстрирует противоречие в доказательстве: если вложенные плохие отрезки имеют общую точку c, то один интервал U из покрытия содержит c, а малый отрезок In целиком лежит в U.</desc>
 <defs>
 <style>
 text { font-family: 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
@@ -9,100 +9,106 @@ text { font-family: 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
 .muted { fill: #64748b; }
 </style>
 </defs>
+<rect width="1600" height="1400" fill="#f4f7fb"/>
+<rect x="30" y="24" width="1540" height="610" rx="24" fill="#fff" stroke="#dbe3ef" stroke-width="2"/>
+<rect x="30" y="655" width="1540" height="715" rx="24" fill="#fff" stroke="#dbe3ef" stroke-width="2"/>
 
-<rect width="1600" height="900" fill="#f4f7fb"/>
-<rect x="30" y="25" width="1540" height="850" rx="24" fill="#ffffff" stroke="#dbe3ef" stroke-width="2"/>
+<!-- A. A concrete system S of open intervals covering I1. -->
+<text x="70" y="76" font-size="31" font-weight="700">1. Что означает «система S покрывает I₁»</text>
+<text x="70" y="119" font-size="23" class="math">I₁ = [a,b] = [0,1],   S = { Uₓ : x ∈ [0,1] },   Uₓ = (x − 0,14; x + 0,14)</text>
+<text x="70" y="153" font-size="18" class="muted">Это бесконечная система открытых интервалов. Для каждого x ∈ [0,1] точка x принадлежит своему Uₓ.</text>
 
-<text x="70" y="72" font-size="34" font-weight="700">Почему работает деление пополам: плохой отрезок попадает внутрь U</text>
-<text x="70" y="108" font-size="19" class="muted">Зорич, т. 1, § 3, п. 2, с. 101–103. Числовой пример: c = 2/3, U = (0,6; 0,8)</text>
-
-<!-- вертикальные границы U -->
-<g stroke="#059669" stroke-width="2" stroke-dasharray="5 7" opacity="0.8">
-  <line x1="920" y1="470" x2="920" y2="640"/>
-  <line x1="1160" y1="470" x2="1160" y2="640"/>
+<!-- Plot representative members: x = 0, .2, .4, .6, .8, 1. Scale 0..1 -> 280..1360. -->
+<g stroke-width="13" stroke-linecap="round" opacity="0.88">
+  <line x1="128.8" y1="215" x2="431.2" y2="215" stroke="#2563eb"/>
+  <line x1="344.8" y1="270" x2="647.2" y2="270" stroke="#7c3aed"/>
+  <line x1="560.8" y1="325" x2="863.2" y2="325" stroke="#db2777"/>
+  <line x1="776.8" y1="380" x2="1079.2" y2="380" stroke="#ea580c"/>
+  <line x1="992.8" y1="435" x2="1295.2" y2="435" stroke="#059669"/>
+  <line x1="1208.8" y1="490" x2="1511.2" y2="490" stroke="#0891b2"/>
+</g>
+<!-- Open ends of each interval. -->
+<g fill="#fff" stroke-width="3">
+  <circle cx="128.8" cy="215" r="8" stroke="#2563eb"/><circle cx="431.2" cy="215" r="8" stroke="#2563eb"/>
+  <circle cx="344.8" cy="270" r="8" stroke="#7c3aed"/><circle cx="647.2" cy="270" r="8" stroke="#7c3aed"/>
+  <circle cx="560.8" cy="325" r="8" stroke="#db2777"/><circle cx="863.2" cy="325" r="8" stroke="#db2777"/>
+  <circle cx="776.8" cy="380" r="8" stroke="#ea580c"/><circle cx="1079.2" cy="380" r="8" stroke="#ea580c"/>
+  <circle cx="992.8" cy="435" r="8" stroke="#059669"/><circle cx="1295.2" cy="435" r="8" stroke="#059669"/>
+  <circle cx="1208.8" cy="490" r="8" stroke="#0891b2"/><circle cx="1511.2" cy="490" r="8" stroke="#0891b2"/>
+</g>
+<g font-size="19" class="math" font-weight="600">
+  <text x="450" y="222" fill="#1d4ed8">U₀</text>
+  <text x="666" y="277" fill="#6d28d9">U₀,₂</text>
+  <text x="882" y="332" fill="#be185d">U₀,₄</text>
+  <text x="1098" y="387" fill="#c2410c">U₀,₆</text>
+  <text x="1314" y="442" fill="#047857">U₀,₈</text>
+  <text x="1420" y="497" fill="#0e7490">U₁</text>
 </g>
 
-<!-- предельная точка c -->
-<line x1="1000" y1="140" x2="1000" y2="630" stroke="#dc2626" stroke-width="3" stroke-dasharray="9 7"/>
-<circle cx="1000" cy="140" r="6" fill="#dc2626"/>
-<text x="1012" y="134" font-size="20" fill="#b91c1c" class="math">c = 2/3</text>
+<!-- The covered segment I1, explicitly distinguished from the coordinate axis. -->
+<text x="70" y="547" font-size="19" font-weight="600">Отрезок I₁:</text>
+<line x1="280" y1="540" x2="1360" y2="540" stroke="#0f172a" stroke-width="5"/>
+<path d="M280 529 V551 M1360 529 V551" stroke="#0f172a" stroke-width="4"/>
+<g stroke="#64748b" stroke-width="2">
+  <line x1="280" y1="535" x2="280" y2="558"/><line x1="496" y1="535" x2="496" y2="558"/>
+  <line x1="712" y1="535" x2="712" y2="558"/><line x1="928" y1="535" x2="928" y2="558"/>
+  <line x1="1144" y1="535" x2="1144" y2="558"/><line x1="1360" y1="535" x2="1360" y2="558"/>
+</g>
+<g font-size="17" text-anchor="middle">
+  <text x="280" y="581">a = 0</text><text x="496" y="581">0,2</text><text x="712" y="581">0,4</text>
+  <text x="928" y="581">0,6</text><text x="1144" y="581">0,8</text><text x="1360" y="581">b = 1</text>
+</g>
+<text x="70" y="615" font-size="18" fill="#15803d" font-weight="600">Перекрытие соседних Uₓ даёт покрытие всего [0,1]; шесть показанных интервалов уже составляют конечное подпокрытие.</text>
 
-<!-- вложенные отрезки -->
-<g>
-  <rect x="200" y="170" width="1200" height="24" rx="4" fill="#1d4ed8" fill-opacity="0.10" stroke="#1d4ed8" stroke-width="2"/>
-  <text x="1412" y="188" font-size="17" fill="#1d4ed8" class="math">I₁ = [0; 1]</text>
+<!-- B. The contradiction step in the proof for an arbitrary covering system. -->
+<text x="70" y="708" font-size="31" font-weight="700">2. Как это используется в доказательстве для произвольной S</text>
+<text x="70" y="746" font-size="18" class="muted">Предполагаем, что конечного подпокрытия нет; тогда строятся вложенные «плохие» отрезки Iₙ. Этот шаг приводит к противоречию.</text>
+<text x="70" y="776" font-size="16" class="muted">Нижняя схема иллюстрирует только этот логический шаг; числа не задают то же конкретное семейство, что нарисовано выше.</text>
+
+<!-- Number line, positions scaled 0..1 -> 280..1360; nested intervals. -->
+<g stroke="#1d4ed8" stroke-width="3" fill="#1d4ed8" fill-opacity="0.10">
+  <rect x="280" y="795" width="1080" height="28" rx="5"/>
+  <rect x="820" y="852" width="540" height="28" rx="5"/>
+  <rect x="820" y="909" width="270" height="28" rx="5"/>
+  <rect x="955" y="966" width="135" height="28" rx="5"/>
 </g>
-<g>
-  <rect x="800" y="225" width="600" height="24" rx="4" fill="#1d4ed8" fill-opacity="0.10" stroke="#1d4ed8" stroke-width="2"/>
-  <text x="1412" y="243" font-size="17" fill="#1d4ed8" class="math">I₂ = [0,5; 1]</text>
-</g>
-<g>
-  <rect x="800" y="280" width="300" height="24" rx="4" fill="#1d4ed8" fill-opacity="0.10" stroke="#1d4ed8" stroke-width="2"/>
-  <text x="1112" y="298" font-size="17" fill="#1d4ed8" class="math">I₃ = [0,5; 0,75]</text>
-</g>
-<g>
-  <rect x="950" y="335" width="150" height="24" rx="4" fill="#1d4ed8" fill-opacity="0.10" stroke="#1d4ed8" stroke-width="2"/>
-  <text x="1112" y="353" font-size="17" fill="#1d4ed8" class="math">I₄ = [0,625; 0,75]</text>
-</g>
-<g>
-  <rect x="950" y="390" width="75" height="24" rx="4" fill="#f59e0b" fill-opacity="0.25" stroke="#b45309" stroke-width="3"/>
-  <text x="1037" y="408" font-size="17" fill="#92400e" class="math">I₅ = [0,625; 0,6875]</text>
+<rect x="955" y="1023" width="67.5" height="28" rx="5" fill="#f59e0b" fill-opacity="0.30" stroke="#b45309" stroke-width="3"/>
+<g font-size="18" class="math" fill="#1d4ed8">
+  <text x="1380" y="817">I₁ = [0; 1]</text>
+  <text x="1380" y="874">I₂ = [0,5; 1]</text>
+  <text x="1110" y="931">I₃ = [0,5; 0,75]</text>
+  <text x="1110" y="988">I₄ = [0,625; 0,75]</text>
+  <text x="1040" y="1045" fill="#92400e">I₅ = [0,625; 0,6875]</text>
 </g>
 
-<!-- интервал U -->
-<g>
-  <rect x="920" y="500" width="240" height="34" rx="5" fill="#059669" fill-opacity="0.14" stroke="#059669" stroke-width="3"/>
-  <circle cx="920" cy="517" r="6" fill="#ffffff" stroke="#059669" stroke-width="3"/>
-  <circle cx="1160" cy="517" r="6" fill="#ffffff" stroke="#059669" stroke-width="3"/>
-  <text x="908" y="492" font-size="19" fill="#047857" class="math" text-anchor="end">U = (0,6; 0,8)</text>
+<!-- c and one member U of the covering S. -->
+<line x1="1000" y1="780" x2="1000" y2="1140" stroke="#dc2626" stroke-width="3" stroke-dasharray="9 7"/>
+<circle cx="1000" cy="765" r="7" fill="#dc2626"/>
+<text x="1014" y="772" font-size="19" class="math" fill="#b91c1c">c = 2/3</text>
+<g stroke="#059669" stroke-width="2" stroke-dasharray="5 6" opacity="0.75">
+  <line x1="928" y1="1065" x2="928" y2="1160"/>
+  <line x1="1144" y1="1065" x2="1144" y2="1160"/>
 </g>
+<rect x="928" y="1085" width="216" height="36" rx="6" fill="#059669" fill-opacity="0.16" stroke="#059669" stroke-width="3"/>
+<circle cx="928" cy="1103" r="7" fill="#fff" stroke="#059669" stroke-width="3"/>
+<circle cx="1144" cy="1103" r="7" fill="#fff" stroke="#059669" stroke-width="3"/>
+<text x="928" y="1077" font-size="18" class="math" text-anchor="middle" fill="#047857">α = 0,6</text>
+<text x="1144" y="1077" font-size="18" class="math" text-anchor="middle" fill="#047857">β = 0,8</text>
+<text x="1160" y="1110" font-size="19" class="math" fill="#047857">U = (α, β) ∈ S</text>
 
-<!-- длина I5 -->
-<g stroke="#b45309" stroke-width="2">
-  <line x1="950" y1="438" x2="950" y2="448"/>
-  <line x1="1025" y1="438" x2="1025" y2="448"/>
-  <line x1="950" y1="443" x2="1025" y2="443"/>
-</g>
-<text x="1037" y="447" font-size="16" fill="#92400e">|I₅| = 1/16 = 0,0625</text>
-
-<!-- эпсилон -->
-<g stroke="#059669" stroke-width="2">
-  <line x1="920" y1="590" x2="1000" y2="590"/>
-  <polygon points="920,590 933,584 933,596" fill="#059669"/>
-  <polygon points="1000,590 987,584 987,596" fill="#059669"/>
-</g>
-<text x="985" y="620" font-size="16" fill="#047857" text-anchor="end">ε = c − 0,6 = 1/15 ≈ 0,0667</text>
-
-<!-- ось -->
-<line x1="200" y1="640" x2="1400" y2="640" stroke="#94a3b8" stroke-width="4"/>
+<!-- Axis and labels. -->
+<line x1="280" y1="1150" x2="1360" y2="1150" stroke="#94a3b8" stroke-width="4"/>
 <g stroke="#94a3b8" stroke-width="2">
-  <line x1="200" y1="632" x2="200" y2="648"/>
-  <line x1="320" y1="632" x2="320" y2="648"/>
-  <line x1="440" y1="632" x2="440" y2="648"/>
-  <line x1="560" y1="632" x2="560" y2="648"/>
-  <line x1="680" y1="632" x2="680" y2="648"/>
-  <line x1="800" y1="632" x2="800" y2="648"/>
-  <line x1="920" y1="632" x2="920" y2="648"/>
-  <line x1="1040" y1="632" x2="1040" y2="648"/>
-  <line x1="1160" y1="632" x2="1160" y2="648"/>
-  <line x1="1280" y1="632" x2="1280" y2="648"/>
-  <line x1="1400" y1="632" x2="1400" y2="648"/>
+  <line x1="280" y1="1141" x2="280" y2="1160"/><line x1="496" y1="1141" x2="496" y2="1160"/>
+  <line x1="712" y1="1141" x2="712" y2="1160"/><line x1="928" y1="1141" x2="928" y2="1160"/>
+  <line x1="1144" y1="1141" x2="1144" y2="1160"/><line x1="1360" y1="1141" x2="1360" y2="1160"/>
 </g>
-<g font-size="18" text-anchor="middle">
-  <text x="200" y="676">0,0</text>
-  <text x="440" y="676">0,2</text>
-  <text x="680" y="676">0,4</text>
-  <text x="920" y="676">0,6</text>
-  <text x="1160" y="676">0,8</text>
-  <text x="1400" y="676">1,0</text>
+<g font-size="17" text-anchor="middle">
+  <text x="280" y="1183">0</text><text x="496" y="1183">0,2</text><text x="712" y="1183">0,4</text>
+  <text x="928" y="1183">α=0,6</text><text x="1000" y="1183" fill="#b91c1c">c=2/3</text>
+  <text x="1144" y="1183">β=0,8</text><text x="1360" y="1183">1</text>
 </g>
-<g font-size="16" fill="#b91c1c" text-anchor="middle">
-  <text x="1000" y="676">2/3</text>
-</g>
-
-<!-- пояснения -->
-<text x="70" y="742" font-size="20">I₅ = [0,625; 0,6875] ⊂ U = (0,6; 0,8): одного интервала U уже достаточно, чтобы покрыть I₅.</text>
-<text x="70" y="778" font-size="20">Но I₅ строился как отрезок, который нельзя покрыть конечным набором интервалов из S, — противоречие.</text>
-<text x="70" y="816" font-size="18" class="muted">Ключ: c лежит внутри U, поэтому ε = min{c − 0,6; 0,8 − c} = 1/15 &gt; 0; а длина I_n стремится к нулю.</text>
-<text x="70" y="850" font-size="18" class="muted">Как только |I_n| &lt; ε, весь I_n оказывается внутри U: для x ∈ I_n имеем |x − c| ≤ |I_n| &lt; ε.</text>
+<text x="70" y="1230" font-size="19" class="math">Так как c ∈ Iₙ и |I₅| = 1/16 &lt; ε = min(c − 0,6; 0,8 − c) = 1/15, то I₅ ⊂ U.</text>
+<text x="70" y="1270" font-size="19">Но U — один интервал из S, значит он конечным набором (из одного интервала) покрывает I₅.</text>
+<text x="70" y="1312" font-size="19" fill="#b91c1c" font-weight="600">Это противоречит построению I₅ как отрезка без конечного покрытия.</text>
 </svg>

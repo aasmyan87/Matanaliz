@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Пример системы интервалов, покрывающей отрезок [0,1]</title>
+<desc id="desc">Бесконечная система U_x=(x−0,12;x+0,12), где x пробегает [0,1]. Показаны шесть выбранных интервалов U_0, U_0,2, U_0,4, U_0,6, U_0,8, U_1; вместе они покрывают [0,1].</desc>
+<defs>
+<style>
+text { font-family: 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+.math { font-family: Cambria, 'Times New Roman', serif; }
+.muted { fill: #64748b; }
+</style>
+</defs>
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="30" y="25" width="1540" height="850" rx="24" fill="#fff" stroke="#dbe3ef" stroke-width="2"/>
+
+<text x="75" y="82" font-size="36" font-weight="700">Система интервалов покрывает отрезок</text>
+<text x="75" y="132" font-size="24" class="math">S = { Uₓ : x ∈ [0,1] },   Uₓ = (x − 0,12; x + 0,12)</text>
+<text x="75" y="169" font-size="19" class="muted">Каждая точка x отрезка лежит в своём интервале Uₓ. Ниже выбраны шесть интервалов из всей системы.</text>
+
+<!-- Шесть интервалов конечного подпокрытия; общая шкала: 0..1 отображается в x=180..1420. -->
+<g stroke-width="12" stroke-linecap="round" opacity="0.88">
+  <line x1="31.2" y1="250" x2="328.8" y2="250" stroke="#2563eb"/>
+  <line x1="279.2" y1="325" x2="576.8" y2="325" stroke="#7c3aed"/>
+  <line x1="527.2" y1="400" x2="824.8" y2="400" stroke="#db2777"/>
+  <line x1="775.2" y1="475" x2="1072.8" y2="475" stroke="#ea580c"/>
+  <line x1="1023.2" y1="550" x2="1320.8" y2="550" stroke="#059669"/>
+  <line x1="1271.2" y1="625" x2="1568.8" y2="625" stroke="#0891b2"/>
+</g>
+<g fill="#fff" stroke-width="3">
+  <circle cx="31.2" cy="250" r="8" stroke="#2563eb"/><circle cx="328.8" cy="250" r="8" stroke="#2563eb"/>
+  <circle cx="279.2" cy="325" r="8" stroke="#7c3aed"/><circle cx="576.8" cy="325" r="8" stroke="#7c3aed"/>
+  <circle cx="527.2" cy="400" r="8" stroke="#db2777"/><circle cx="824.8" cy="400" r="8" stroke="#db2777"/>
+  <circle cx="775.2" cy="475" r="8" stroke="#ea580c"/><circle cx="1072.8" cy="475" r="8" stroke="#ea580c"/>
+  <circle cx="1023.2" cy="550" r="8" stroke="#059669"/><circle cx="1320.8" cy="550" r="8" stroke="#059669"/>
+  <circle cx="1271.2" cy="625" r="8" stroke="#0891b2"/><circle cx="1568.8" cy="625" r="8" stroke="#0891b2"/>
+</g>
+<g font-size="21" class="math" font-weight="600">
+  <text x="342" y="257" fill="#1d4ed8">U₀</text>
+  <text x="590" y="332" fill="#6d28d9">U₀,₂</text>
+  <text x="838" y="407" fill="#be185d">U₀,₄</text>
+  <text x="1086" y="482" fill="#c2410c">U₀,₆</text>
+  <text x="1334" y="557" fill="#047857">U₀,₈</text>
+  <text x="1370" y="632" fill="#0e7490">U₁</text>
+</g>
+<text x="75" y="698" font-size="19" class="muted">Пустые кружки — концы открытых интервалов Uₓ. Соседние выбранные интервалы перекрываются.</text>
+
+<!-- Отрезок и полоска, показывающая покрытие всей его длины. -->
+<rect x="180" y="745" width="1240" height="32" rx="6" fill="#0f172a" opacity="0.10"/>
+<rect x="180" y="745" width="1240" height="32" rx="6" fill="#16a34a" opacity="0.45"/>
+<line x1="180" y1="761" x2="1420" y2="761" stroke="#0f172a" stroke-width="3"/>
+<circle cx="180" cy="761" r="7" fill="#0f172a"/><circle cx="1420" cy="761" r="7" fill="#0f172a"/>
+<g stroke="#64748b" stroke-width="2">
+  <line x1="180" y1="735" x2="180" y2="790"/><line x1="428" y1="750" x2="428" y2="790"/>
+  <line x1="676" y1="750" x2="676" y2="790"/><line x1="924" y1="750" x2="924" y2="790"/>
+  <line x1="1172" y1="750" x2="1172" y2="790"/><line x1="1420" y1="735" x2="1420" y2="790"/>
+</g>
+<g font-size="19" text-anchor="middle">
+  <text x="180" y="824">0</text><text x="428" y="824">0,2</text><text x="676" y="824">0,4</text>
+  <text x="924" y="824">0,6</text><text x="1172" y="824">0,8</text><text x="1420" y="824">1</text>
+</g>
+<text x="800" y="862" font-size="22" text-anchor="middle" font-weight="600" fill="#15803d">U₀ ∪ U₀,₂ ∪ U₀,₄ ∪ U₀,₆ ∪ U₀,₈ ∪ U₁ ⊇ [0,1]</text>
+</svg>

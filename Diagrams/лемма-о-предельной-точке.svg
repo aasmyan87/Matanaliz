@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1450" viewBox="0 0 1500 1450" role="img" aria-labelledby="title desc">
+  <title id="title">Очень подробное объяснение леммы Больцано—Вейерштрасса</title>
+  <desc id="desc">Сначала на X={1/n} показано отличие окрестности как интервала из вещественных чисел от пересечения этой окрестности с X. Затем по шагам показано доказательство от противного у Зорича: если предельной точки нет, у каждого x есть окрестность с конечным X пересечение U(x); эти окрестности покрывают отрезок; конечное подпокрытие даёт X как конечное объединение конечных частей и противоречие.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #172033; }
+      .title { font-size: 29px; font-weight: 700; }
+      .subtitle { font-size: 16px; fill: #475569; }
+      .head { font-size: 20px; font-weight: 700; }
+      .body { font-size: 16px; }
+      .small { font-size: 14px; fill: #475569; }
+      .math { font-family: "Cambria Math", "Times New Roman", serif; font-size: 19px; }
+      .axis { stroke: #334155; stroke-width: 2; }
+      .tick { stroke: #334155; stroke-width: 1.5; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1500" height="1450" fill="#f8fafc"/>
+  <text x="55" y="51" class="title">Лемма Больцано—Вейерштрасса: где появляется конечность?</text>
+  <text x="55" y="81" class="subtitle">Зорич, т. 1, гл. II, § 3, п. 3, с. 103–104. Разбираем отдельно ключевую фразу X∩U(x) конечно.</text>
+
+  <rect x="55" y="104" width="1390" height="98" rx="14" fill="#eaf2ff" stroke="#bfdbfe"/>
+  <text x="80" y="140" class="head">Лемма</text>
+  <text x="80" y="174" class="math">Если X⊂ℝ бесконечно и ограничено, то существует p∈ℝ, каждая окрестность которого содержит бесконечно много точек X.</text>
+  <text x="80" y="198" class="small">Такую точку p называют предельной точкой X; она может не принадлежать X.</text>
+
+  <rect x="55" y="222" width="1390" height="350" rx="14" fill="white" stroke="#cbd5e1"/>
+  <text x="80" y="260" class="head">Сначала различим U и X∩U на примере X={1/n : n∈ℕ}</text>
+  <text x="80" y="288" class="small">Синяя полоса — интервал U=(0,4; 0,6), где точка x=1/2. На этой оси шаг шкалы одинаковый: 500 пикселей на 1.</text>
+
+  <!-- axis x=130 at 0; x=680 at 1.1, so 500 px per unit -->
+  <line x1="130" y1="360" x2="680" y2="360" class="axis"/>
+  <rect x="330" y="340" width="100" height="40" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-dasharray="6 4"/>
+  <line x1="330" y1="320" x2="330" y2="400" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="430" y1="320" x2="430" y2="400" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <g class="tick"><path d="M130 352v16 M230 352v16 M255 352v16 M280 352v16 M296.7 352v16 M330 352v16 M380 349v22 M430 352v16 M630 352v16 M680 352v16"/></g>
+  <g class="small" text-anchor="middle"><text x="130" y="426">0</text><text x="230" y="426">1/5</text><text x="255" y="446">1/4</text><text x="296.7" y="446">1/3</text><text x="330" y="426">0,4</text><text x="380" y="426">1/2</text><text x="430" y="426">0,6</text><text x="630" y="426">1</text><text x="680" y="426">1,1</text></g>
+  <g fill="#2563eb" stroke="white" stroke-width="1.5"><circle cx="630" cy="360" r="7"/><circle cx="380" cy="360" r="7"/><circle cx="296.7" cy="360" r="7"/><circle cx="255" cy="360" r="7"/><circle cx="230" cy="360" r="7"/><circle cx="213.3" cy="360" r="7"/><circle cx="200" cy="360" r="7"/><circle cx="190" cy="360" r="7"/></g>
+  <text x="380" y="318" class="small" text-anchor="middle" fill="#1d4ed8">x=1/2; это единственная точка X внутри U</text>
+  <text x="80" y="468" class="math">U=(0,4;0,6) — бесконечно много вещественных чисел.</text>
+  <text x="80" y="496" class="math">X∩U={1/2} — одна точка, то есть конечное множество.</text>
+  <rect x="80" y="515" width="628" height="38" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="96" y="540" class="body">Конечность относится только к X∩U, а не ко всему интервалу U.</text>
+
+  <rect x="745" y="300" width="670" height="253" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="773" y="337" class="head">А у предельной точки так выбрать нельзя</text>
+  <text x="773" y="372" class="body">В этом же X точка p=0 — предельная.</text>
+  <text x="773" y="403" class="math">Любое Uδ(0)=(−δ,δ) содержит все 1/n</text>
+  <text x="773" y="432" class="math">при достаточно больших n, значит X∩Uδ(0) бесконечно.</text>
+  <line x1="800" y1="479" x2="1360" y2="479" class="axis"/>
+  <line x1="1080" y1="465" x2="1080" y2="493" stroke="#dc2626" stroke-width="2.5"/>
+  <g fill="#2563eb"><circle cx="1088" cy="479" r="5"/><circle cx="1095" cy="479" r="5"/><circle cx="1102" cy="479" r="5"/><circle cx="1109" cy="479" r="5"/><circle cx="1116" cy="479" r="5"/><circle cx="1123" cy="479" r="5"/><circle cx="1130" cy="479" r="5"/><circle cx="1137" cy="479" r="5"/></g>
+  <text x="1080" y="515" class="small" text-anchor="middle" fill="#b91c1c">0</text>
+  <text x="1175" y="515" class="small">много 1/n в любой Uδ(0)</text>
+  <text x="773" y="540" class="small">Для X=(1,3) аналогично: при x=2 каждое U(2) пересекает X по бесконечному интервалу.</text>
+
+  <rect x="55" y="592" width="1390" height="779" rx="14" fill="white" stroke="#cbd5e1"/>
+  <text x="80" y="631" class="head">Теперь доказательство: конечность X∩U(x) — временное следствие предположения от противного</text>
+
+  <rect x="80" y="654" width="1340" height="96" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+  <circle cx="111" cy="687" r="17" fill="#ea580c"/><text x="111" y="693" font-size="15" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <text x="141" y="688" class="body" font-weight="700">Так как X ограничено, берём отрезок I=[a,b] так, что X⊂I. Предположим, что в I нет предельной точки X.</text>
+  <text x="141" y="722" class="small">Мы временно предполагаем невозможное, чтобы вывести противоречие с тем, что X бесконечно.</text>
+
+  <rect x="80" y="765" width="1340" height="117" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <circle cx="111" cy="799" r="17" fill="#475569"/><text x="111" y="805" font-size="15" font-weight="700" fill="white" text-anchor="middle">2</text>
+  <text x="141" y="800" class="body" font-weight="700">Раскрываем отрицание определения: для каждого x∈I есть хотя бы одна окрестность U(x), где точек X конечное число.</text>
+  <text x="141" y="836" class="math">∀x∈I ∃U(x):  F(x):=X∩U(x) конечно.</text>
+  <text x="141" y="864" class="small">Не всякая окрестность такая: выбираем одну подходящую для каждого x. Если x предельная, подходящей окрестности нет.</text>
+
+  <circle cx="111" cy="918" r="17" fill="#2563eb"/><text x="111" y="924" font-size="15" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <text x="141" y="919" class="body" font-weight="700">Пусть S={U(x):x∈I}. Каждая x попадает в собственную U(x), значит S покрывает I.</text>
+  <text x="141" y="948" class="math">Лемма о конечном покрытии: выберем U₁=U(x₁), …, Uₙ=U(xₙ), где n конечно, и I⊂U₁∪…∪Uₙ.</text>
+  <text x="141" y="976" class="small">Поскольку X⊂I, эти же несколько интервалов покрывают всё X. Ниже показано именно это конечное подпокрытие.</text>
+
+  <!-- Hypothetical finite subcover: intervals extend beyond covered endpoints; all of I is covered. -->
+  <rect x="170" y="1002" width="270" height="28" rx="14" fill="#bfdbfe" stroke="#2563eb"/><text x="305" y="1022" class="small" text-anchor="middle">U₁=U(x₁)</text>
+  <rect x="390" y="1034" width="280" height="28" rx="14" fill="#ddd6fe" stroke="#7c3aed"/><text x="530" y="1054" class="small" text-anchor="middle">U₂=U(x₂)</text>
+  <rect x="630" y="1002" width="260" height="28" rx="14" fill="#bbf7d0" stroke="#16a34a"/><text x="760" y="1022" class="small" text-anchor="middle">… Uᵢ=U(xᵢ)</text>
+  <rect x="850" y="1034" width="260" height="28" rx="14" fill="#fde68a" stroke="#d97706"/><text x="980" y="1054" class="small" text-anchor="middle">… Uₙ=U(xₙ)</text>
+  <line x1="190" y1="1080" x2="1090" y2="1080" class="axis"/>
+  <line x1="190" y1="1071" x2="190" y2="1089" class="tick"/><line x1="1090" y1="1071" x2="1090" y2="1089" class="tick"/>
+  <text x="190" y="1103" class="small" text-anchor="middle">a</text><text x="1090" y="1103" class="small" text-anchor="middle">b</text>
+  <g fill="#2563eb" stroke="white" stroke-width="1.5"><circle cx="260" cy="1080" r="5"/><circle cx="340" cy="1080" r="5"/><circle cx="465" cy="1080" r="5"/><circle cx="580" cy="1080" r="5"/><circle cx="700" cy="1080" r="5"/><circle cx="815" cy="1080" r="5"/><circle cx="940" cy="1080" r="5"/><circle cx="1010" cy="1080" r="5"/></g>
+  <text x="640" y="1103" class="small" text-anchor="middle">I=[a,b]; синие точки — элементы X, остальные точки опущены</text>
+
+  <rect x="90" y="1120" width="250" height="104" rx="11" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="108" y="1148" class="head" fill="#1d4ed8">F₁=X∩U₁</text><text x="108" y="1178" class="math">{y₁₁,…,y₁,m₁}</text><text x="108" y="1207" class="small">конечный список</text>
+  <rect x="365" y="1120" width="250" height="104" rx="11" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="383" y="1148" class="head" fill="#6d28d9">F₂=X∩U₂</text><text x="383" y="1178" class="math">{y₂₁,…,y₂,m₂}</text><text x="383" y="1207" class="small">конечный список</text>
+  <rect x="640" y="1120" width="250" height="104" rx="11" fill="#f0fdf4" stroke="#4ade80" stroke-width="2"/>
+  <text x="658" y="1148" class="head" fill="#15803d">Fᵢ=X∩Uᵢ</text><text x="658" y="1178" class="math">{yᵢ₁,…,yᵢ,mᵢ}</text><text x="658" y="1207" class="small">конечный список</text>
+  <rect x="915" y="1120" width="250" height="104" rx="11" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="933" y="1148" class="head" fill="#b45309">Fₙ=X∩Uₙ</text><text x="933" y="1178" class="math">{yₙ₁,…,yₙ,mₙ}</text><text x="933" y="1207" class="small">конечный список</text>
+  <text x="1190" y="1147" class="small">Каждая карточка</text><text x="1190" y="1171" class="small">конечна по шагу 2.</text><text x="1190" y="1200" class="small">Некоторые карточки</text><text x="1190" y="1222" class="small">могут пересекаться.</text>
+
+  <rect x="80" y="1240" width="1340" height="127" rx="12" fill="#ecfdf5" stroke="#86efac"/>
+  <circle cx="111" cy="1274" r="17" fill="#16a34a"/><text x="111" y="1280" font-size="15" font-weight="700" fill="white" text-anchor="middle">4</text>
+  <text x="141" y="1276" class="body" font-weight="700">Каждая точка X покрыта хотя бы одним Uᵢ, поэтому X=F₁∪F₂∪…∪Fₙ.</text>
+  <text x="141" y="1311" class="math">Конечное число конечных множеств даёт конечное объединение ⇒ X конечно.</text>
+  <text x="141" y="1344" class="body">Противоречие: X было бесконечным. Значит, в I найдётся предельная точка X.</text>
+  <text x="55" y="1401" class="small">Логика у Вельмана (гл. 3): цель существования → доказательство от противного; отрицание определения → кванторы ∀x∈I ∃U(x).</text>
+</svg>

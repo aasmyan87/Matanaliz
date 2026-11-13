@@ -1,85 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
-<title id="title">Принцип Архимеда: шесть полных шагов h, остаток и клетка с x</title>
-<desc id="desc">Пример h = 0,3 и x = 2,0: на числовой прямой отмечены кратные h; от 0 до x укладывается шесть полных шагов (1,8), остаток 0,2 меньше h, а x лежит в клетке [6h, 7h) = [1,8; 2,1), поэтому k = 7.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="2220" viewBox="0 0 1920 2220" role="img" aria-labelledby="t d">
+<title id="t">Принцип Архимеда: ячейка сетки, доказательство и два примера</title>
+<desc id="d">Крупная схема формулировки принципа Архимеда по Зоричу, идеи доказательства через минимум множества целых чисел и двух примеров с масштабированными числовыми прямыми. В каждом примере отмечены точка x, шаг h, полные шаги, остаток и ячейка, содержащая x.</desc>
 <defs>
-<style>
-text{font-family:'Segoe UI',Arial,sans-serif;fill:#172033}
-.math{font-family:Cambria,'Times New Roman',serif}
-.muted{fill:#64748b}
-</style>
+  <style>
+    text{font-family:'Segoe UI',Arial,sans-serif;fill:#172033}
+    .m{font-family:Cambria,'Times New Roman',serif}
+    .muted{fill:#596579}
+    .body{font-size:28px}
+    .axislabel{font-size:24px;font-weight:600}
+    .formula{font-size:38px;font-weight:700}
+    .step{font-size:27px}
+  </style>
+  <marker id="axisArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#334155"/></marker>
+  <marker id="blueArrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto-start-reverse"><path d="M0 0L12 6L0 12z" fill="#2563eb"/></marker>
 </defs>
+<rect width="1920" height="2220" fill="#eef3f9"/>
+<rect x="28" y="24" width="1864" height="2172" rx="32" fill="#fff" stroke="#d6e0ec" stroke-width="3"/>
 
-<rect width="1600" height="1120" fill="#f3f6fb"/>
-<rect x="24" y="20" width="1552" height="1080" rx="28" fill="#ffffff" stroke="#dbe3ef" stroke-width="2"/>
+<text x="76" y="96" font-size="52" font-weight="750">Принцип Архимеда: шаги, ячейка и остаток</text>
+<text x="78" y="142" font-size="27" class="muted">Зорич, т. 1, гл. II, § 2, п. 3, утверждение 6° и его доказательство, с. 79–80</text>
 
-<text x="60" y="72" font-size="40" font-weight="700">Принцип Архимеда: полные шаги h, остаток и клетка с x</text>
-<text x="60" y="114" font-size="22" class="muted">Зорич, т. 1, гл. II, § 2, п. 3, 6° (с. 80); пример h = 0,3, x = 2,0</text>
+<rect x="70" y="180" width="1780" height="236" rx="24" fill="#edf6ff" stroke="#b9d8fb" stroke-width="3"/>
+<text x="108" y="232" font-size="32" font-weight="700" fill="#1d4ed8">Точная формулировка Зорича</text>
+<text x="108" y="292" font-size="34" class="m">Для любого x ∈ ℝ и любого h &gt; 0 найдётся ровно одно k ∈ ℤ, для которого</text>
+<text x="108" y="356" class="m formula">(k − 1)h ≤ x &lt; kh.</text>
+<text x="650" y="354" font-size="27" class="muted">То есть x лежит в единственной ячейке [ (k−1)h ; kh ) сетки с шагом h.</text>
 
-<rect x="60" y="142" width="1480" height="112" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
-<text x="90" y="180" font-size="21" font-weight="700" fill="#1d4ed8">Формулировка (6°)</text>
-<text x="90" y="232" font-size="27" class="math">Для любого h &gt; 0 и любого x ∈ ℝ существует единственное k ∈ ℤ: (k − 1)h ≤ x &lt; kh.</text>
+<rect x="70" y="444" width="1780" height="400" rx="24" fill="#f8fafc" stroke="#dce5ef" stroke-width="3"/>
+<text x="108" y="500" font-size="34" font-weight="700">Идея доказательства: построить множество кандидатов</text>
+<text x="110" y="550" class="step"><tspan font-weight="700" fill="#2563eb">1.</tspan> Делим на h &gt; 0: нужно найти целое k так, чтобы k−1 ≤ x/h &lt; k.</text>
+<text x="110" y="602" class="step"><tspan font-weight="700" fill="#2563eb">2.</tspan> Берём S = { j ∈ ℤ : x/h &lt; j }. Множество S непусто: ℤ не ограничено сверху.</text>
+<text x="110" y="654" class="step"><tspan font-weight="700" fill="#2563eb">3.</tspan> S ограничено снизу: есть целое число меньше x/h, поскольку ℤ не ограничено снизу.</text>
+<text x="110" y="706" class="step"><tspan font-weight="700" fill="#2563eb">4.</tspan> У S есть минимальный элемент k (предыдущий результат Зорича о подмножествах ℤ).</text>
+<text x="110" y="758" class="step">Из k ∈ S следует x/h &lt; k; из k−1 ∉ S — k−1 ≤ x/h. Умножаем на h &gt; 0.</text>
+<text x="110" y="808" font-size="25" class="muted">Минимальность даёт существование нужной ячейки; одна и та же ячейка не может пересекаться с другой — отсюда единственность.</text>
 
-<rect x="60" y="274" width="1480" height="84" rx="16" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
-<text x="90" y="326" font-size="24">Пример: h = 0,3; x = 2,0.   Ищем k: (k − 1)·0,3 ≤ 2,0 &lt; k·0,3.</text>
-
-<!-- клетка, содержащая x -->
-<rect x="984" y="734" width="144" height="52" rx="8" fill="#ffedd5" stroke="#fdba74" stroke-width="2"/>
-
-<!-- числовая прямая -->
-<line x1="90" y1="760" x2="1320" y2="760" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
-<g stroke="#94a3b8" stroke-width="2.5">
-<line x1="120" y1="748" x2="120" y2="772"/>
-<line x1="264" y1="748" x2="264" y2="772"/>
-<line x1="408" y1="748" x2="408" y2="772"/>
-<line x1="552" y1="748" x2="552" y2="772"/>
-<line x1="696" y1="748" x2="696" y2="772"/>
-<line x1="840" y1="748" x2="840" y2="772"/>
-<line x1="984" y1="748" x2="984" y2="772"/>
-<line x1="1128" y1="748" x2="1128" y2="772"/>
-<line x1="1272" y1="748" x2="1272" y2="772"/>
+<text x="78" y="914" font-size="37" font-weight="700">Пример 1. h = 0,3; x = 2,0; получаем k = 7</text>
+<text x="80" y="958" font-size="26" class="muted">Одна единица на оси равна 450 px. Подсвечена ячейка [6h; 7h) = [1,8; 2,1).</text>
+<rect x="1050" y="978" width="135" height="96" rx="18" fill="#fff2c6" stroke="#f2d17a" stroke-width="2"/>
+<line x1="240" y1="1030" x2="1660" y2="1030" stroke="#334155" stroke-width="5" marker-end="url(#axisArrow)"/>
+<line x1="240" y1="982" x2="375" y2="982" stroke="#2563eb" stroke-width="4" marker-start="url(#blueArrow)" marker-end="url(#blueArrow)"/>
+<text x="308" y="970" text-anchor="middle" font-size="25" font-weight="700" fill="#1d4ed8">h = 0,3</text>
+<line x1="1140" y1="970" x2="1140" y2="1043" stroke="#b45309" stroke-width="4" stroke-dasharray="9 7"/>
+<circle cx="1140" cy="1030" r="12" fill="#b45309" stroke="#fff" stroke-width="4"/>
+<text x="1140" y="948" text-anchor="middle" font-size="27" font-weight="700" fill="#92400e">x = 2,0</text>
+<g stroke="#64748b" stroke-width="3" fill="#172033" class="axislabel" text-anchor="middle">
+  <path d="M240 1010v40M375 1010v40M510 1010v40M645 1010v40M780 1010v40M915 1010v40M1050 1010v40M1185 1010v40M1320 1010v40M1455 1010v40M1590 1010v40"/>
+  <text x="240" y="1100">0</text><text x="375" y="1100">0,3</text><text x="510" y="1100">0,6</text><text x="645" y="1100">0,9</text><text x="780" y="1100">1,2</text><text x="915" y="1100">1,5</text><text x="1050" y="1100">1,8 = 6h</text><text x="1185" y="1100">2,1 = 7h</text><text x="1320" y="1100">2,4 = 8h</text><text x="1455" y="1100">2,7 = 9h</text><text x="1590" y="1100">3,0 = 10h</text>
 </g>
-<g font-size="20" class="muted" text-anchor="middle">
-<text x="120" y="802">0</text>
-<text x="264" y="802">0,3</text>
-<text x="408" y="802">0,6</text>
-<text x="552" y="802">0,9</text>
-<text x="696" y="802">1,2</text>
-<text x="840" y="802">1,5</text>
-<text x="984" y="802">1,8</text>
-<text x="1128" y="802">2,1</text>
-<text x="1272" y="802">2,4</text>
+<line x1="240" y1="1160" x2="1050" y2="1160" stroke="#0f766e" stroke-width="10"/>
+<path d="M240 1145v30M1050 1145v30" stroke="#0f766e" stroke-width="4"/>
+<text x="645" y="1203" text-anchor="middle" font-size="28" font-weight="700" fill="#0f766e">6 полных шагов: 6h = 1,8</text>
+<line x1="1050" y1="1250" x2="1140" y2="1250" stroke="#d97706" stroke-width="10"/>
+<path d="M1050 1235v30M1140 1235v30" stroke="#d97706" stroke-width="4"/>
+<text x="1095" y="1293" text-anchor="middle" font-size="27" font-weight="700" fill="#b45309">остаток 0,2 &lt; h</text>
+<text x="80" y="1360" class="m" font-size="34" font-weight="700">6·0,3 = 1,8 ≤ 2,0 &lt; 2,1 = 7·0,3, поэтому k = 7.</text>
+
+<text x="78" y="1450" font-size="37" font-weight="700">Пример 2. h = 0,5; x = 2,7; получаем k = 6</text>
+<text x="80" y="1494" font-size="26" class="muted">Та же шкала. x лежит в ячейке [5h; 6h) = [2,5; 3,0); от 0 до x укладывается 5 полных шагов.</text>
+<rect x="1365" y="1514" width="225" height="96" rx="18" fill="#eee8ff" stroke="#c8b5f5" stroke-width="2"/>
+<line x1="240" y1="1566" x2="1660" y2="1566" stroke="#334155" stroke-width="5" marker-end="url(#axisArrow)"/>
+<line x1="240" y1="1518" x2="465" y2="1518" stroke="#2563eb" stroke-width="4" marker-start="url(#blueArrow)" marker-end="url(#blueArrow)"/>
+<text x="352" y="1506" text-anchor="middle" font-size="25" font-weight="700" fill="#1d4ed8">h = 0,5</text>
+<line x1="1455" y1="1506" x2="1455" y2="1579" stroke="#6d28d9" stroke-width="4" stroke-dasharray="9 7"/>
+<circle cx="1455" cy="1566" r="12" fill="#6d28d9" stroke="#fff" stroke-width="4"/>
+<text x="1455" y="1484" text-anchor="middle" font-size="27" font-weight="700" fill="#5b21b6">x = 2,7</text>
+<g stroke="#64748b" stroke-width="3" fill="#172033" class="axislabel" text-anchor="middle">
+  <path d="M240 1546v40M465 1546v40M690 1546v40M915 1546v40M1140 1546v40M1365 1546v40M1590 1546v40"/>
+  <text x="240" y="1636">0</text><text x="465" y="1636">0,5</text><text x="690" y="1636">1,0</text><text x="915" y="1636">1,5</text><text x="1140" y="1636">2,0</text><text x="1365" y="1636">2,5 = 5h</text><text x="1590" y="1636">3,0 = 6h</text>
 </g>
+<line x1="240" y1="1692" x2="1365" y2="1692" stroke="#0f766e" stroke-width="10"/>
+<path d="M240 1677v30M1365 1677v30" stroke="#0f766e" stroke-width="4"/>
+<text x="802" y="1735" text-anchor="middle" font-size="28" font-weight="700" fill="#0f766e">5 полных шагов: 5h = 2,5</text>
+<line x1="1365" y1="1780" x2="1455" y2="1780" stroke="#d97706" stroke-width="10"/>
+<path d="M1365 1765v30M1455 1765v30" stroke="#d97706" stroke-width="4"/>
+<text x="1410" y="1823" text-anchor="middle" font-size="27" font-weight="700" fill="#b45309">остаток 0,2 &lt; h</text>
+<text x="80" y="1890" class="m" font-size="34" font-weight="700">5·0,5 = 2,5 ≤ 2,7 &lt; 3,0 = 6·0,5, поэтому k = 6.</text>
 
-<!-- шаг h -->
-<line x1="120" y1="480" x2="120" y2="500" stroke="#7c3aed" stroke-width="2.5"/>
-<line x1="264" y1="480" x2="264" y2="500" stroke="#7c3aed" stroke-width="2.5"/>
-<line x1="120" y1="480" x2="264" y2="480" stroke="#7c3aed" stroke-width="3"/>
-<text x="192" y="462" text-anchor="middle" font-size="21" font-weight="700" fill="#6d28d9">h = 0,3 (шаг)</text>
-
-<!-- шесть полных шагов -->
-<line x1="120" y1="570" x2="120" y2="620" stroke="#2563eb" stroke-width="2.5"/>
-<line x1="984" y1="570" x2="984" y2="620" stroke="#2563eb" stroke-width="2.5"/>
-<line x1="120" y1="570" x2="984" y2="570" stroke="#2563eb" stroke-width="3"/>
-<text x="552" y="552" text-anchor="middle" font-size="21" font-weight="700" fill="#1d4ed8">6 полных шагов по h: 6h = 1,8</text>
-
-<!-- остаток -->
-<line x1="984" y1="650" x2="984" y2="700" stroke="#059669" stroke-width="2.5"/>
-<line x1="1080" y1="650" x2="1080" y2="700" stroke="#059669" stroke-width="2.5"/>
-<line x1="984" y1="650" x2="1080" y2="650" stroke="#059669" stroke-width="3"/>
-<text x="1092" y="644" font-size="21" font-weight="700" fill="#047857">остаток 0,2 &lt; h</text>
-
-<!-- точка x -->
-<circle cx="1080" cy="760" r="9" fill="#1d4ed8" stroke="#ffffff" stroke-width="3"/>
-<text x="1092" y="730" font-size="24" font-weight="700" fill="#1d4ed8">x = 2,0</text>
-
-<!-- подпись клетки -->
-<text x="1056" y="840" text-anchor="middle" font-size="19" class="muted">клетка [(k−1)h, kh) = [1,8; 2,1)</text>
-
-<!-- итоговая формула -->
-<rect x="60" y="880" width="1480" height="120" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-<text x="90" y="934" font-size="30" class="math">(7 − 1)·0,3 = 1,8 ≤ 2,0 &lt; 2,1 = 7·0,3</text>
-<text x="90" y="974" font-size="20" class="muted">k = 7; k − 1 = 6 полных шагов; остаток x − 6h = 0,2 &lt; 0,3 = h; следующее кратное 7h = 2,1.</text>
-
-<text x="60" y="1046" font-size="19" class="muted">Единственность: x лежит ровно в одной клетке [nh, (n+1)h).</text>
+<rect x="70" y="1940" width="1780" height="205" rx="24" fill="#f0fdf4" stroke="#b7e3c2" stroke-width="3"/>
+<text x="108" y="1992" font-size="30" font-weight="700" fill="#166534">Привычная форма о больших кратных — частный случай</text>
+<text x="108" y="2040" font-size="28">При a &gt; 0 и b &gt; 0 берём h = a, x = b. Тогда (k−1)a ≤ b &lt; ka, откуда ka &gt; b.</text>
+<text x="108" y="2090" font-size="27" class="muted">Кроме того, k &gt; 0, поэтому k ∈ ℕ. Числовые оси иллюстрируют утверждение, но не доказывают общий случай.</text>
 </svg>
