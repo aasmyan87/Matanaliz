@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960" role="img" aria-labelledby="title desc">
+  <title id="title">Дельта-критерии супремума и инфимума</title>
+  <desc id="desc">Два числовых примера показывают, что все элементы лежат по одну сторону точной грани, а для любого заданного дельта можно выбрать элемент внутри дельта-полосы.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #172033; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #526078; }
+      .head { font-size: 25px; font-weight: 700; }
+      .body { font-size: 19px; }
+      .small { font-size: 16px; fill: #526078; }
+      .math { font-size: 20px; font-weight: 600; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; }
+      .axis { stroke: #344054; stroke-width: 3; }
+      .tick { stroke: #667085; stroke-width: 2; }
+      .guide { stroke: #98a2b3; stroke-width: 1.5; stroke-dasharray: 6 6; }
+      .sup { fill: #167a5a; stroke: #0b5d42; }
+      .inf { fill: #3559a8; stroke: #233f82; }
+      .band { stroke: #f0a52b; stroke-width: 12; stroke-linecap: round; opacity: .52; }
+      .dot { fill: #26364d; stroke: white; stroke-width: 2; }
+      .selected { fill: #e07819; stroke: white; stroke-width: 3; }
+      .boundary { fill: white; stroke-width: 4; }
+      .pill { fill: #f4f7fb; stroke: #d5deea; stroke-width: 1.5; rx: 12; }
+    </style>
+  </defs>
+  <rect width="1400" height="960" fill="#f6f8fb"/>
+  <text x="60" y="58" class="title">Дельта-критерии точных граней</text>
+  <text x="60" y="91" class="subtitle">Проверяем две вещи: грань ограничивает всё множество, а элементы подходят к ней сколь угодно близко.</text>
+  <rect x="45" y="120" width="640" height="830" class="panel"/>
+  <rect x="715" y="120" width="640" height="830" class="panel"/>
+
+  <text x="75" y="164" class="head" fill="#167a5a">Супремум s</text>
+  <text x="75" y="202" class="math">sup A = s</text>
+  <text x="75" y="235" class="body">⇔  (∀a∈A: a≤s)  и  (∀δ&gt;0 ∃a<tspan baseline-shift="sub" font-size="14">δ</tspan>∈A:</text>
+  <text x="104" y="266" class="body">s−δ &lt; a<tspan baseline-shift="sub" font-size="14">δ</tspan> ≤ s)</text>
+  <rect x="75" y="290" width="580" height="94" class="pill"/>
+  <text x="95" y="324" class="body">Пример: A={1−1/n : n∈ℕ}, s=1.</text>
+  <text x="95" y="356" class="body">Берём δ=1/4 и aδ=4/5 (n=5): 3/4 &lt; 4/5 ≤ 1.</text>
+  <text x="80" y="432" class="small">Все точки A не правее s; в интервале (s−δ, s] найдётся точка A.</text>
+  <line x1="105" y1="565" x2="625" y2="565" class="axis"/>
+  <line x1="410" y1="520" x2="410" y2="760" class="guide"/>
+  <line x1="510" y1="510" x2="510" y2="760" class="guide"/>
+  <line x1="410" y1="724" x2="510" y2="724" class="band"/>
+  <circle cx="410" cy="724" r="8" class="boundary" stroke="#c77d0a"/>
+  <circle cx="510" cy="724" r="8" fill="#c77d0a"/>
+  <text x="390" y="758" class="small">s−δ=3/4</text>
+  <text x="489" y="758" class="small">s=1</text>
+  <circle cx="110" cy="565" r="7" class="dot"/>
+  <circle cx="310" cy="565" r="7" class="dot"/>
+  <circle cx="376.7" cy="565" r="7" class="dot"/>
+  <circle cx="410" cy="565" r="7" class="dot"/>
+  <circle cx="430" cy="565" r="10" class="selected"/>
+  <circle cx="443.3" cy="565" r="7" class="dot"/>
+  <circle cx="460" cy="565" r="7" class="dot"/>
+  <circle cx="470" cy="565" r="7" class="dot"/>
+  <circle cx="510" cy="565" r="9" class="boundary" stroke="#167a5a"/>
+  <text x="103" y="600" class="small">0</text>
+  <text x="294" y="600" class="small">1/2</text>
+  <text x="400" y="600" class="small">3/4</text>
+  <text x="501" y="600" class="small">1</text>
+  <text x="591" y="600" class="small">5/4</text>
+  <text x="75" y="666" class="small">● — элементы A; оранжевая точка — aδ; ○ при s — s∉A.</text>
+
+  <text x="745" y="164" class="head" fill="#3559a8">Инфимум i</text>
+  <text x="745" y="202" class="math">inf B = i</text>
+  <text x="745" y="235" class="body">⇔  (∀b∈B: i≤b)  и  (∀δ&gt;0 ∃b<tspan baseline-shift="sub" font-size="14">δ</tspan>∈B:</text>
+  <text x="774" y="266" class="body">i ≤ b<tspan baseline-shift="sub" font-size="14">δ</tspan> &lt; i+δ)</text>
+  <rect x="745" y="290" width="580" height="94" class="pill"/>
+  <text x="765" y="324" class="body">Пример: B={1+1/n : n∈ℕ}, i=1.</text>
+  <text x="765" y="356" class="body">Берём δ=1/4 и bδ=6/5 (n=5): 1 ≤ 6/5 &lt; 5/4.</text>
+  <text x="750" y="432" class="small">Все точки B не левее i; в интервале [i, i+δ) найдётся точка B.</text>
+  <line x1="785" y1="565" x2="1300" y2="565" class="axis"/>
+  <line x1="860" y1="510" x2="860" y2="760" class="guide"/>
+  <line x1="960" y1="510" x2="960" y2="760" class="guide"/>
+  <line x1="860" y1="724" x2="960" y2="724" class="band"/>
+  <circle cx="860" cy="724" r="8" fill="#c77d0a"/>
+  <circle cx="960" cy="724" r="8" class="boundary" stroke="#c77d0a"/>
+  <text x="850" y="758" class="small">i=1</text>
+  <text x="946" y="758" class="small">i+δ=5/4</text>
+  <circle cx="1260" cy="565" r="7" class="dot"/>
+  <circle cx="1060" cy="565" r="7" class="dot"/>
+  <circle cx="993.3" cy="565" r="7" class="dot"/>
+  <circle cx="960" cy="565" r="7" class="dot"/>
+  <circle cx="940" cy="565" r="10" class="selected"/>
+  <circle cx="926.7" cy="565" r="7" class="dot"/>
+  <circle cx="910" cy="565" r="7" class="dot"/>
+  <circle cx="900" cy="565" r="7" class="dot"/>
+  <circle cx="860" cy="565" r="9" class="boundary" stroke="#3559a8"/>
+  <text x="850" y="600" class="small">1</text>
+  <text x="949" y="600" class="small">5/4</text>
+  <text x="1050" y="600" class="small">3/2</text>
+  <text x="1250" y="600" class="small">2</text>
+  <text x="745" y="666" class="small">● — элементы B; оранжевая точка — bδ; ○ при i — i∉B.</text>
+</svg>

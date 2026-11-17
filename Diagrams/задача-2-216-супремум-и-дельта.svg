@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc">
+  <title id="title">Задача 2.216: супремум и дельта</title>
+  <desc id="desc">Для множества значений 2m/(3n), где натуральные m меньше n, показана верхняя грань две трети, граничный выбор m=n−1, дельта-полоса и конкретный элемент для delta равной одной пятой.</desc>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #172033; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #526078; }
+      .head { font-size: 24px; font-weight: 700; }
+      .body { font-size: 20px; }
+      .small { font-size: 16px; fill: #526078; }
+      .math { font-size: 22px; font-weight: 600; }
+      .axis { stroke: #344054; stroke-width: 3; }
+      .tick { stroke: #667085; stroke-width: 2; }
+      .guide { stroke: #98a2b3; stroke-width: 1.5; stroke-dasharray: 7 6; }
+      .point { fill: #315a9b; stroke: white; stroke-width: 2; }
+      .chosen { fill: #e07819; stroke: white; stroke-width: 3; }
+      .bound { fill: white; stroke: #167a5a; stroke-width: 4; }
+      .band { stroke: #f0a52b; stroke-width: 14; stroke-linecap: round; opacity: .55; }
+      .box { fill: #ffffff; stroke: #cad4e2; stroke-width: 2; rx: 16; }
+      .green { fill: #167a5a; }
+      .orange { fill: #b9600c; }
+    </style>
+  </defs>
+  <rect width="1400" height="920" fill="#f6f8fb"/>
+  <text x="60" y="58" class="title">Задача 2.216: супремум и δ-критерий</text>
+  <text x="60" y="92" class="subtitle">A={2m/(3n) : m,n∈ℕ, m&lt;n}. Ищем s так, чтобы все элементы A были ≤s и подходили к s снизу сколь угодно близко.</text>
+  <rect x="60" y="125" width="610" height="150" class="box"/>
+  <text x="90" y="165" class="head green">1. Верхняя грань</text>
+  <text x="90" y="205" class="body">m&lt;n ⇒ 2m&lt;2n ⇒ 2m/(3n)&lt;2/3.</text>
+  <text x="90" y="244" class="body">Значит, кандидат s=2/3 — верхняя грань A.</text>
+  <rect x="700" y="125" width="640" height="150" class="box"/>
+  <text x="730" y="165" class="head orange">2. Насколько грань точная?</text>
+  <text x="730" y="205" class="body">При фиксированном n берём наибольшее m=n−1.</text>
+  <text x="730" y="244" class="math">a<tspan baseline-shift="sub" font-size="15">n</tspan>=2(n−1)/(3n)=2/3−2/(3n).</text>
+
+  <text x="75" y="330" class="body">Пример допуска: δ=1/5; возьмём n=5, m=4.</text>
+  <text x="75" y="366" class="body">Тогда aδ=8/15, s−δ=7/15, а s=2/3=10/15.</text>
+  <text x="75" y="402" class="math">7/15 &lt; 8/15 ≤ 10/15,   s−aδ=2/15&lt;δ=1/5.</text>
+
+  <!-- Number-line coordinates use x = 180 + 1200t. -->
+  <line x1="170" y1="580" x2="1255" y2="580" class="axis"/>
+  <line x1="740" y1="480" x2="740" y2="760" class="guide"/>
+  <line x1="980" y1="468" x2="980" y2="760" class="guide"/>
+  <line x1="740" y1="706" x2="980" y2="706" class="band"/>
+  <circle cx="740" cy="706" r="9" class="bound"/>
+  <circle cx="980" cy="706" r="9" fill="#167a5a"/>
+  <text x="685" y="748" class="small">s−δ=7/15 (open)</text>
+  <text x="954" y="748" class="small">s=2/3</text>
+  <text x="795" y="680" class="small orange">aδ=8/15, m=4, n=5</text>
+  <circle cx="580" cy="580" r="7" class="point"/>
+  <circle cx="713.3" cy="580" r="7" class="point"/>
+  <circle cx="780" cy="580" r="7" class="point"/>
+  <circle cx="820" cy="580" r="11" class="chosen"/>
+  <circle cx="846.7" cy="580" r="7" class="point"/>
+  <circle cx="865.7" cy="580" r="7" class="point"/>
+  <circle cx="880" cy="580" r="7" class="point"/>
+  <circle cx="900" cy="580" r="7" class="point"/>
+  <circle cx="980" cy="580" r="10" class="bound"/>
+  <line x1="580" y1="580" x2="580" y2="606" class="tick"/>
+  <line x1="740" y1="580" x2="740" y2="606" class="tick"/>
+  <line x1="780" y1="580" x2="780" y2="606" class="tick"/>
+  <line x1="820" y1="580" x2="820" y2="606" class="tick"/>
+  <line x1="980" y1="580" x2="980" y2="606" class="tick"/>
+  <line x1="1080" y1="580" x2="1080" y2="606" class="tick"/>
+  <text x="560" y="635" class="small">1/3</text>
+  <text x="720" y="635" class="small">7/15</text>
+  <text x="766" y="635" class="small">1/2</text>
+  <text x="805" y="635" class="small">8/15</text>
+  <text x="964" y="635" class="small">2/3</text>
+  <text x="1063" y="635" class="small">3/4</text>
+  <text x="75" y="818" class="small">Синие точки — граничные значения aₙ при m=n−1 (показаны несколько); остальные элементы A тоже левее s.</text>
+  <text x="75" y="849" class="small">Открытая точка на s означает, что s∉A; залитый конец полосы показывает, что интервал (s−δ,s] включает s.</text>
+  <text x="75" y="884" class="body green">Итак: s=2/3 — верхняя грань, и для любого δ&gt;0 найдётся aδ∈A с s−δ&lt;aδ≤s. Поэтому sup A=2/3.</text>
+</svg>
