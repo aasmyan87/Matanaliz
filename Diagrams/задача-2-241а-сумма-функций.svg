@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="940" viewBox="0 0 1280 940" role="img" aria-labelledby="title desc">
+  <title id="title">Задача 2.241(a): супремум суммы функций</title>
+  <desc id="desc">На конечном примере показаны значения функций f и g, значения их суммы и верхняя грань sup f плюс sup g. Ниже дана общая логическая цепочка доказательства.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#41536b"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #203047; }
+      .title { font-size: 29px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #526477; }
+      .heading { font-size: 21px; font-weight: 700; }
+      .label { font-size: 17px; }
+      .small { font-size: 15px; fill: #526477; }
+      .axis { stroke: #65758b; stroke-width: 2; }
+      .tick { stroke: #65758b; stroke-width: 1.5; }
+      .fpoint { fill: #1769aa; stroke: #fff; stroke-width: 2; }
+      .gpoint { fill: #d87820; stroke: #fff; stroke-width: 2; }
+      .spoint { fill: #16806a; stroke: #fff; stroke-width: 2; }
+      .bound { stroke: #8a4fb2; stroke-width: 3; stroke-dasharray: 8 6; }
+      .card { fill: #f7f9fc; stroke: #d5deea; stroke-width: 1.5; }
+      .proof { fill: #fff; stroke: #cbd6e3; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1280" height="940" fill="#ffffff"/>
+  <text x="640" y="48" text-anchor="middle" class="title">Задача 2.241(a): супремум суммы функций</text>
+  <text x="640" y="79" text-anchor="middle" class="subtitle">Для функций на одном множестве A: sup_{x∈A}(f(x)+g(x)) ≤ sup_{t∈A}f(t) + sup_{t∈A}g(t)</text>
+
+  <rect x="52" y="108" width="1176" height="430" rx="16" class="card"/>
+  <text x="82" y="146" class="heading">Числовой пример: A={a,b,c}</text>
+  <text x="82" y="175" class="small">Собираем значения при одном и том же x, затем складываем их попарно.</text>
+
+  <text x="90" y="228" class="label" font-weight="700" fill="#1769aa">f(x)</text>
+  <text x="90" y="344" class="label" font-weight="700" fill="#d87820">g(x)</text>
+  <text x="90" y="460" class="label" font-weight="700" fill="#16806a">f(x)+g(x)</text>
+
+  <!-- Number lines share the same scale: 0 to 10. -->
+  <g>
+    <line x1="250" y1="226" x2="1110" y2="226" class="axis"/>
+    <line x1="250" y1="342" x2="1110" y2="342" class="axis"/>
+    <line x1="250" y1="458" x2="1110" y2="458" class="axis"/>
+    <g class="small" text-anchor="middle">
+      <g><line x1="250" y1="219" x2="250" y2="233" class="tick"/><text x="250" y="254">0</text></g>
+      <g><line x1="336" y1="219" x2="336" y2="233" class="tick"/><text x="336" y="254">1</text></g>
+      <g><line x1="422" y1="219" x2="422" y2="233" class="tick"/><text x="422" y="254">2</text></g>
+      <g><line x1="508" y1="219" x2="508" y2="233" class="tick"/><text x="508" y="254">3</text></g>
+      <g><line x1="594" y1="219" x2="594" y2="233" class="tick"/><text x="594" y="254">4</text></g>
+      <g><line x1="680" y1="219" x2="680" y2="233" class="tick"/><text x="680" y="254">5</text></g>
+      <g><line x1="766" y1="219" x2="766" y2="233" class="tick"/><text x="766" y="254">6</text></g>
+      <g><line x1="852" y1="219" x2="852" y2="233" class="tick"/><text x="852" y="254">7</text></g>
+      <g><line x1="938" y1="219" x2="938" y2="233" class="tick"/><text x="938" y="254">8</text></g>
+      <g><line x1="1024" y1="219" x2="1024" y2="233" class="tick"/><text x="1024" y="254">9</text></g>
+      <g><line x1="1110" y1="219" x2="1110" y2="233" class="tick"/><text x="1110" y="254">10</text></g>
+    </g>
+    <g class="small" text-anchor="middle">
+      <g><line x1="250" y1="335" x2="250" y2="349" class="tick"/><text x="250" y="370">0</text></g>
+      <g><line x1="336" y1="335" x2="336" y2="349" class="tick"/><text x="336" y="370">1</text></g>
+      <g><line x1="422" y1="335" x2="422" y2="349" class="tick"/><text x="422" y="370">2</text></g>
+      <g><line x1="508" y1="335" x2="508" y2="349" class="tick"/><text x="508" y="370">3</text></g>
+      <g><line x1="594" y1="335" x2="594" y2="349" class="tick"/><text x="594" y="370">4</text></g>
+      <g><line x1="680" y1="335" x2="680" y2="349" class="tick"/><text x="680" y="370">5</text></g>
+      <g><line x1="766" y1="335" x2="766" y2="349" class="tick"/><text x="766" y="370">6</text></g>
+      <g><line x1="852" y1="335" x2="852" y2="349" class="tick"/><text x="852" y="370">7</text></g>
+      <g><line x1="938" y1="335" x2="938" y2="349" class="tick"/><text x="938" y="370">8</text></g>
+      <g><line x1="1024" y1="335" x2="1024" y2="349" class="tick"/><text x="1024" y="370">9</text></g>
+      <g><line x1="1110" y1="335" x2="1110" y2="349" class="tick"/><text x="1110" y="370">10</text></g>
+    </g>
+    <g class="small" text-anchor="middle">
+      <g><line x1="250" y1="451" x2="250" y2="465" class="tick"/><text x="250" y="486">0</text></g>
+      <g><line x1="336" y1="451" x2="336" y2="465" class="tick"/><text x="336" y="486">1</text></g>
+      <g><line x1="422" y1="451" x2="422" y2="465" class="tick"/><text x="422" y="486">2</text></g>
+      <g><line x1="508" y1="451" x2="508" y2="465" class="tick"/><text x="508" y="486">3</text></g>
+      <g><line x1="594" y1="451" x2="594" y2="465" class="tick"/><text x="594" y="486">4</text></g>
+      <g><line x1="680" y1="451" x2="680" y2="465" class="tick"/><text x="680" y="486">5</text></g>
+      <g><line x1="766" y1="451" x2="766" y2="465" class="tick"/><text x="766" y="486">6</text></g>
+      <g><line x1="852" y1="451" x2="852" y2="465" class="tick"/><text x="852" y="486">7</text></g>
+      <g><line x1="938" y1="451" x2="938" y2="465" class="tick"/><text x="938" y="486">8</text></g>
+      <g><line x1="1024" y1="451" x2="1024" y2="465" class="tick"/><text x="1024" y="486">9</text></g>
+      <g><line x1="1110" y1="451" x2="1110" y2="465" class="tick"/><text x="1110" y="486">10</text></g>
+    </g>
+  </g>
+
+  <!-- f-values: 2, 5, 1; g-values: 4, 1, 3; sums: 6, 6, 4. Scale: 86 px per unit. -->
+  <g text-anchor="middle" class="label">
+    <circle cx="422" cy="226" r="9" class="fpoint"/><text x="422" y="207" fill="#1769aa">2 (a)</text>
+    <circle cx="680" cy="226" r="9" class="fpoint"/><text x="680" y="207" fill="#1769aa">5 (b)</text>
+    <circle cx="336" cy="226" r="9" class="fpoint"/><text x="336" y="207" fill="#1769aa">1 (c)</text>
+    <circle cx="594" cy="342" r="9" class="gpoint"/><text x="594" y="323" fill="#b45c12">4 (a)</text>
+    <circle cx="336" cy="342" r="9" class="gpoint"/><text x="336" y="323" fill="#b45c12">1 (b)</text>
+    <circle cx="508" cy="342" r="9" class="gpoint"/><text x="508" y="323" fill="#b45c12">3 (c)</text>
+    <circle cx="766" cy="458" r="9" class="spoint"/><text x="766" y="439" fill="#126854">6 (a,b)</text>
+    <circle cx="594" cy="458" r="9" class="spoint"/><text x="594" y="439" fill="#126854">4 (c)</text>
+  </g>
+  <line x1="1024" y1="402" x2="1024" y2="474" class="bound"/>
+  <text x="1024" y="395" text-anchor="middle" class="label" fill="#8a4fb2">sup f + sup g = 5+4=9</text>
+  <text x="82" y="520" class="small">В примере sup f=5, sup g=4, а sup(f+g)=6; число 9 — верхняя грань сумм, хотя сама точная грань меньше.</text>
+
+  <text x="640" y="590" text-anchor="middle" class="heading">Общее доказательство: почему верна оценка</text>
+  <rect x="70" y="620" width="340" height="120" rx="14" class="proof"/>
+  <text x="240" y="657" text-anchor="middle" class="label" font-weight="700">Для каждого x∈A</text>
+  <text x="240" y="691" text-anchor="middle" class="label">f(x) ≤ F := sup_{t∈A}f(t)</text>
+  <text x="240" y="720" text-anchor="middle" class="label">g(x) ≤ G := sup_{t∈A}g(t)</text>
+
+  <line x1="420" y1="680" x2="475" y2="680" stroke="#41536b" stroke-width="2.4" marker-end="url(#arrow)"/>
+  <rect x="490" y="620" width="300" height="120" rx="14" class="proof"/>
+  <text x="640" y="657" text-anchor="middle" class="label" font-weight="700">Складываем</text>
+  <text x="640" y="697" text-anchor="middle" class="label">f(x)+g(x) ≤ F+G</text>
+
+  <line x1="800" y1="680" x2="855" y2="680" stroke="#41536b" stroke-width="2.4" marker-end="url(#arrow)"/>
+  <rect x="870" y="620" width="340" height="120" rx="14" class="proof"/>
+  <text x="1040" y="657" text-anchor="middle" class="label" font-weight="700">Для всех x∈A</text>
+  <text x="1040" y="697" text-anchor="middle" class="label">F+G — верхняя грань</text>
+  <text x="1040" y="722" text-anchor="middle" class="small">S={f(x)+g(x):x∈A}</text>
+
+  <path d="M 1040 748 L 1040 770 L 900 770 L 900 788" fill="none" stroke="#41536b" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <rect x="295" y="790" width="690" height="92" rx="14" fill="#f1f7f4" stroke="#bad8c8" stroke-width="1.5"/>
+  <text x="640" y="826" text-anchor="middle" class="label" font-weight="700">Супремум — наименьшая верхняя грань</text>
+  <text x="640" y="860" text-anchor="middle" class="label">sup_{x∈A}(f(x)+g(x)) ≤ sup_{t∈A}f(t) + sup_{t∈A}g(t)</text>
+
+  <text x="640" y="917" text-anchor="middle" class="small">Числа сверху иллюстрируют идею; доказательство использует оценки для произвольного x∈A.</text>
+</svg>
