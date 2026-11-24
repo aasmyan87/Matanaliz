@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="970" viewBox="0 0 1280 970" role="img" aria-labelledby="title desc">
+  <title id="title">Расходимость последовательности x_n=(-1)^n</title>
+  <desc id="desc">Показано, что для кандидата A=0 с epsilon=1 члены равны открытым концам окрестности, а для любого кандидата A и любого N хвост содержит обе точки -1 и 1, поэтому хотя бы одна точка вне окрестности радиуса 1.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#40536b"/>
+    </marker>
+    <marker id="measure" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M 0 4 L 8 0 L 8 8 z" fill="#1769aa"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #203047; }
+      .title { font-size: 29px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #526477; }
+      .head { font-size: 21px; font-weight: 700; }
+      .label { font-size: 17px; }
+      .small { font-size: 15px; fill: #526477; }
+      .axis { stroke: #526477; stroke-width: 2.4; }
+      .tick { stroke: #526477; stroke-width: 1.5; }
+      .window { fill: #e9f3fb; stroke: #8ab6d8; stroke-width: 1.5; }
+      .panel { fill: #f7f9fc; stroke: #d5deea; stroke-width: 1.5; }
+      .card { fill: #fff; stroke: #d5deea; stroke-width: 1.5; }
+      .bad { fill: #fff4f2; stroke: #e6c1bc; stroke-width: 1.5; }
+      .red { fill: #c84b45; stroke: white; stroke-width: 2; }
+      .blue { fill: #1769aa; stroke: white; stroke-width: 2; }
+      .green { fill: #19806a; stroke: white; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="1280" height="970" fill="#ffffff"/>
+  <text x="640" y="46" text-anchor="middle" class="title">Расходящаяся последовательность: xₙ=(−1)ⁿ</text>
+  <text x="640" y="78" text-anchor="middle" class="subtitle">Каждый хвост продолжает чередоваться между −1 и 1; он не собирается около одной точки.</text>
+
+  <rect x="42" y="106" width="1196" height="400" rx="16" class="panel"/>
+  <text x="76" y="147" class="head">Проверим кандидата A=0 при ε=1</text>
+  <text x="76" y="176" class="small">Окрестность V₁(0)=(−1,1) открытая: граничные точки −1 и 1 в неё не входят.</text>
+
+  <!-- Number line: A=0; scale 300 px per unit. -->
+  <rect x="340" y="245" width="600" height="126" rx="8" class="window"/>
+  <line x1="190" y1="310" x2="1090" y2="310" class="axis"/>
+  <line x1="640" y1="205" x2="640" y2="405" stroke="#40536b" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="640" y="200" text-anchor="middle" class="label" font-weight="700">A=0</text>
+  <line x1="340" y1="222" x2="640" y2="222" stroke="#1769aa" stroke-width="2" marker-start="url(#measure)" marker-end="url(#measure)"/>
+  <line x1="640" y1="222" x2="940" y2="222" stroke="#1769aa" stroke-width="2" marker-start="url(#measure)" marker-end="url(#measure)"/>
+  <text x="490" y="211" text-anchor="middle" class="small" fill="#1769aa">ε=1</text>
+  <text x="790" y="211" text-anchor="middle" class="small" fill="#1769aa">ε=1</text>
+
+  <g class="small" text-anchor="middle">
+    <line x1="340" y1="302" x2="340" y2="318" class="tick"/><text x="340" y="342">−1</text>
+    <line x1="490" y1="302" x2="490" y2="318" class="tick"/><text x="490" y="342">−1/2</text>
+    <line x1="640" y1="302" x2="640" y2="318" class="tick"/><text x="640" y="342">0</text>
+    <line x1="790" y1="302" x2="790" y2="318" class="tick"/><text x="790" y="342">1/2</text>
+    <line x1="940" y1="302" x2="940" y2="318" class="tick"/><text x="940" y="342">1</text>
+  </g>
+  <!-- Open neighborhood endpoints, with sequence values displayed just above them. -->
+  <circle cx="340" cy="310" r="11" fill="#fff" stroke="#1769aa" stroke-width="3"/>
+  <circle cx="940" cy="310" r="11" fill="#fff" stroke="#1769aa" stroke-width="3"/>
+  <circle cx="340" cy="287" r="6" class="red"/>
+  <circle cx="940" cy="287" r="6" class="blue"/>
+  <line x1="340" y1="293" x2="340" y2="298" stroke="#c84b45" stroke-width="1.5"/>
+  <line x1="940" y1="293" x2="940" y2="298" stroke="#1769aa" stroke-width="1.5"/>
+  <text x="340" y="278" text-anchor="middle" class="small" fill="#b83f39">xₙ=−1 при нечётных n</text>
+  <text x="940" y="278" text-anchor="middle" class="small" fill="#1769aa">xₙ=1 при чётных n</text>
+
+  <rect x="78" y="390" width="1124" height="84" rx="12" class="bad"/>
+  <text x="104" y="423" class="label" font-weight="700" fill="#a83e38">Для A=0, ε=1 ни один член не лежит в V₁(0): каждый равен −1 или 1, то есть находится на границе.</text>
+  <text x="104" y="453" class="small">Какое бы N ни выбрать, после него всё равно идут и нечётные, и чётные n: хвост не попадает целиком в окрестность.</text>
+
+  <rect x="42" y="532" width="1196" height="386" rx="16" fill="#fbfcfe" stroke="#d5deea" stroke-width="1.5"/>
+  <text x="76" y="573" class="head">Почему это доказывает отсутствие любого предела</text>
+  <text x="640" y="617" text-anchor="middle" class="label">Пусть A — любой предполагаемый предел. Оставим ε=1.</text>
+
+  <rect x="82" y="645" width="465" height="116" rx="12" class="card"/>
+  <text x="314" y="681" text-anchor="middle" class="label" font-weight="700">Каждый хвост содержит обе точки</text>
+  <text x="314" y="718" text-anchor="middle" class="label">для любого N есть n>N нечётное и чётное</text>
+  <text x="314" y="740" text-anchor="middle" class="small">значит, в хвосте есть xₙ=−1 и xₘ=1</text>
+
+  <line x1="562" y1="695" x2="620" y2="695" stroke="#40536b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="635" y="645" width="560" height="116" rx="12" class="card"/>
+  <text x="915" y="681" text-anchor="middle" class="label" font-weight="700">Окрестность V₁(A)=(A−1,A+1) имеет длину 2</text>
+  <text x="915" y="718" text-anchor="middle" class="label">расстояние между −1 и 1 равно 2</text>
+  <text x="915" y="740" text-anchor="middle" class="small">поэтому обе точки не могут быть внутри открытой окрестности</text>
+
+  <rect x="116" y="775" width="1048" height="99" rx="12" fill="#eef7f3" stroke="#b8d7c8" stroke-width="1.5"/>
+  <text x="640" y="811" text-anchor="middle" class="label" font-weight="700">Для любого A: хотя бы одно из расстояний |−1−A|, |1−A| не меньше 1.</text>
+  <text x="640" y="843" text-anchor="middle" class="label">Оба значения встречаются после любого N, поэтому найдётся xₙ вне V₁(A).</text>
+  <text x="640" y="895" text-anchor="middle" class="small">Это отрицание кванторов определения: ∀A ∃ε&gt;0 ∀N ∃n&gt;N, для которого |xₙ−A|≥ε.</text>
+
+  <text x="640" y="951" text-anchor="middle" class="small">Зорич, т. 1, гл. III, § 1, определение 2, с. 112–113; пример показывает провал условия на каждом хвосте.</text>
+</svg>

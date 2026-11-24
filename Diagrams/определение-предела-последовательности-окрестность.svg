@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1020" viewBox="0 0 1280 1020" role="img" aria-labelledby="title desc">
+  <title id="title">Определение предела последовательности через окрестность</title>
+  <desc id="desc">Числовая прямая для последовательности x_n=1/n с пределом 0. Показана открытая ε-окрестность с ε=1/4, первые четыре члена и хвост после N=4. Ниже записано общее определение Зорича.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#40536b"/>
+    </marker>
+    <marker id="measure" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M 0 4 L 8 0 L 8 8 z" fill="#1769aa"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #203047; }
+      .title { font-size: 29px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #526477; }
+      .head { font-size: 21px; font-weight: 700; }
+      .label { font-size: 17px; }
+      .small { font-size: 15px; fill: #526477; }
+      .axis { stroke: #526477; stroke-width: 2.4; }
+      .tick { stroke: #526477; stroke-width: 1.5; }
+      .epsilon { fill: #e9f3fb; stroke: #8ab6d8; stroke-width: 1.5; }
+      .bound { stroke: #1769aa; stroke-width: 2; stroke-dasharray: 7 6; }
+      .early { fill: #c84b45; stroke: white; stroke-width: 2; }
+      .tail { fill: #19806a; stroke: white; stroke-width: 1.5; }
+      .panel { fill: #f7f9fc; stroke: #d5deea; stroke-width: 1.5; }
+      .card { fill: #ffffff; stroke: #d5deea; stroke-width: 1.5; }
+      .good { fill: #eef7f3; stroke: #b8d7c8; stroke-width: 1.5; }
+      .bad { fill: #fff4f2; stroke: #e6c1bc; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="1020" fill="#ffffff"/>
+  <text x="640" y="47" text-anchor="middle" class="title">Определение предела последовательности через окрестность</text>
+  <text x="640" y="79" text-anchor="middle" class="subtitle">Пример Зорича: xₙ = 1/n → A = 0; выбраны ε = 1/4 и N = 4</text>
+
+  <rect x="42" y="108" width="1196" height="458" rx="16" class="panel"/>
+  <text x="76" y="148" class="head">Окрестность точки A=0</text>
+  <text x="76" y="176" class="small">Vε(0) = (−ε, ε) = (−1/4, 1/4): концы интервала не включены.</text>
+
+  <!-- Scale: horizontal coordinate u = 400 + 650x. Visible interval: [-1/2, 11/10]. -->
+  <rect x="237.5" y="258" width="325" height="124" rx="8" class="epsilon"/>
+  <line x1="400" y1="210" x2="400" y2="423" class="bound"/>
+  <text x="400" y="201" text-anchor="middle" class="label" font-weight="700">A = 0</text>
+  <line x1="237.5" y1="232" x2="400" y2="232" stroke="#1769aa" stroke-width="2" marker-start="url(#measure)" marker-end="url(#measure)"/>
+  <line x1="400" y1="232" x2="562.5" y2="232" stroke="#1769aa" stroke-width="2" marker-start="url(#measure)" marker-end="url(#measure)"/>
+  <text x="318.75" y="220" text-anchor="middle" class="small" fill="#1769aa">ε = 1/4</text>
+  <text x="481.25" y="220" text-anchor="middle" class="small" fill="#1769aa">ε = 1/4</text>
+
+  <line x1="75" y1="340" x2="1115" y2="340" class="axis"/>
+  <g class="small" text-anchor="middle">
+    <line x1="75" y1="332" x2="75" y2="348" class="tick"/><text x="75" y="371">−1/2</text>
+    <line x1="237.5" y1="332" x2="237.5" y2="348" class="tick"/><text x="237.5" y="371">−1/4</text>
+    <line x1="400" y1="332" x2="400" y2="348" class="tick"/><text x="400" y="371">0</text>
+    <line x1="562.5" y1="332" x2="562.5" y2="348" class="tick"/><text x="562.5" y="371">1/4</text>
+    <line x1="725" y1="332" x2="725" y2="348" class="tick"/><text x="725" y="371">1/2</text>
+    <line x1="887.5" y1="332" x2="887.5" y2="348" class="tick"/><text x="887.5" y="371">3/4</text>
+    <line x1="1050" y1="332" x2="1050" y2="348" class="tick"/><text x="1050" y="371">1</text>
+  </g>
+
+  <!-- x1=1, x2=1/2, x3=1/3 lie outside; x4=1/4 is exactly the open endpoint. -->
+  <circle cx="1050" cy="340" r="9" class="early"/>
+  <text x="1050" y="310" text-anchor="middle" class="label" fill="#b83f39">x₁=1</text>
+  <circle cx="725" cy="340" r="9" class="early"/>
+  <text x="725" y="310" text-anchor="middle" class="label" fill="#b83f39">x₂=1/2</text>
+  <circle cx="616.7" cy="340" r="9" class="early"/>
+  <text x="616.7" y="310" text-anchor="middle" class="label" fill="#b83f39">x₃=1/3</text>
+
+  <!-- The endpoint circle is open; x4 equals that endpoint and is not in Vε(0). -->
+  <circle cx="562.5" cy="340" r="10" fill="#fff" stroke="#1769aa" stroke-width="3"/>
+  <circle cx="562.5" cy="325" r="5.5" fill="#c84b45"/>
+  <line x1="548" y1="306" x2="560" y2="319" stroke="#c84b45" stroke-width="1.5"/>
+  <text x="545" y="300" text-anchor="end" class="small" fill="#b83f39">x₄=ε</text>
+
+  <!-- Tail points x5,...,x13; all are strictly inside the open interval. -->
+  <g class="tail">
+    <circle cx="530" cy="340" r="6"/><circle cx="508.3" cy="340" r="6"/><circle cx="492.9" cy="340" r="6"/>
+    <circle cx="481.3" cy="340" r="6"/><circle cx="472.2" cy="340" r="6"/><circle cx="465" cy="340" r="6"/>
+    <circle cx="459.1" cy="340" r="5"/><circle cx="454.2" cy="340" r="5"/><circle cx="450" cy="340" r="5"/>
+  </g>
+  <text x="518" y="405" text-anchor="middle" class="small" fill="#15715e">x₅, x₆, …, x₁₃</text>
+  <text x="426" y="405" text-anchor="middle" class="small" fill="#15715e">…</text>
+  <text x="717" y="405" text-anchor="middle" class="small" fill="#526477">Все xₙ при n&gt;4 лежат внутри (−1/4, 1/4).</text>
+
+  <rect x="72" y="434" width="514" height="105" rx="12" class="bad"/>
+  <text x="96" y="465" class="label" font-weight="700" fill="#a83e38">Начальные члены n≤N=4</text>
+  <text x="96" y="496" class="label">x₁, x₂, x₃ снаружи; x₄=1/4 на открытой границе.</text>
+  <text x="96" y="522" class="small">Это допустимо: определение требует условие только при n&gt;N.</text>
+
+  <rect x="606" y="434" width="598" height="105" rx="12" class="good"/>
+  <text x="630" y="465" class="label" font-weight="700" fill="#15715e">Хвост n&gt;N=4</text>
+  <text x="630" y="496" class="label">n&gt;4 ⇒ |xₙ−0| = 1/n &lt; 1/4 = ε.</text>
+  <text x="630" y="522" class="small">Значит, все члены хвоста попадают в выбранную ε-окрестность.</text>
+
+  <rect x="42" y="594" width="1196" height="374" rx="16" fill="#fbfcfe" stroke="#d5deea" stroke-width="1.5"/>
+  <text x="76" y="636" class="head">Общее определение (для произвольных A и ε)</text>
+  <text x="640" y="691" text-anchor="middle" font-size="23" font-weight="700">lim xₙ = A  ⇔  ∀ε&gt;0  ∃N∈ℕ  ∀n&gt;N: |xₙ−A|&lt;ε</text>
+  <text x="640" y="720" text-anchor="middle" class="small">Зорич, т. 1, гл. III, § 1, определение 2; эквивалентная ε–N формулировка.</text>
+
+  <rect x="88" y="752" width="502" height="82" rx="12" class="card"/>
+  <text x="339" y="784" text-anchor="middle" class="label" font-weight="700">Окрестность точки A</text>
+  <text x="339" y="815" text-anchor="middle" class="label">Vε(A)=(A−ε, A+ε)</text>
+  <line x1="603" y1="793" x2="674" y2="793" stroke="#40536b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="690" y="752" width="502" height="82" rx="12" class="card"/>
+  <text x="941" y="784" text-anchor="middle" class="label" font-weight="700">Расстояние до A меньше ε</text>
+  <text x="941" y="815" text-anchor="middle" class="label">xₙ∈Vε(A)  ⇔  |xₙ−A|&lt;ε</text>
+
+  <text x="640" y="871" text-anchor="middle" class="label" font-weight="700">N зависит от выбранного ε</text>
+  <text x="640" y="901" text-anchor="middle" class="label">Начальные x₁,…,x_N могут быть вне окрестности; важен весь хвост xₙ при n&gt;N.</text>
+  <text x="640" y="943" text-anchor="middle" class="small">Пример показывает одно ε и подходящий N=4; доказательство предела 1/n=0 требует такого выбора для каждого ε&gt;0.</text>
+</svg>
