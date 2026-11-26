@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2940" viewBox="0 0 1800 2940" role="img" aria-labelledby="title desc">
+  <title id="title">Полное доказательство критерия Коши по Зоричу</title>
+  <desc id="desc">Полная теорема 4 Зорича: сходящаяся последовательность фундаментальна, а фундаментальная последовательность сходится. Отмечены все оценки, пороги, хвосты, инфимумы, супремумы, вложенные отрезки, общая точка и два примера.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#24344d"/></marker>
+    <style>
+      text{font-family:Arial,'DejaVu Sans',sans-serif;fill:#17243a}
+      .title{font-size:36px;font-weight:700}.subtitle{font-size:20px;fill:#53647c}.head{font-size:25px;font-weight:700}
+      .body{font-size:20px}.small{font-size:17px;fill:#46566d}.tiny{font-size:15px;fill:#46566d}.formula{font-size:23px;font-family:'DejaVu Sans',Arial,sans-serif}
+      .card{fill:#fff;stroke:#cbd5e1;stroke-width:2}.axis{stroke:#24344d;stroke-width:3}.tick{stroke:#24344d;stroke-width:2}
+      .blue{fill:#1976a5}.green{fill:#21845b}.orange{fill:#bd6a12}.red{fill:#b53b45}.muted{fill:#66758a}
+    </style>
+  </defs>
+  <rect width="1800" height="2940" fill="#f5f7fa"/>
+  <text x="70" y="68" class="title">Теорема 4. Критерий Коши сходимости последовательности</text>
+  <text x="70" y="107" class="subtitle">Полное доказательство по Зоричу: обе импликации и все промежуточные объекты</text>
+
+  <rect x="60" y="135" width="1680" height="170" rx="18" class="card"/>
+  <text x="95" y="179" class="head">Формулировка</text>
+  <text x="95" y="221" class="formula">Числовая последовательность сходится тогда и только тогда, когда она фундаментальна.</text>
+  <text x="95" y="263" class="body"><tspan class="blue">(⇒)</tspan>  lim xₙ=A  ⇒  ∀ε&gt;0 ∃N ∀m,n&gt;N: |xₘ−xₙ|&lt;ε</text>
+  <text x="895" y="263" class="body"><tspan class="green">(⇐)</tspan>  фундаментальна  ⇒  существует A=lim xₙ</text>
+
+  <rect x="60" y="325" width="1680" height="440" rx="18" class="card"/>
+  <text x="95" y="370" class="head blue">I. Сходящаяся последовательность фундаментальна</text>
+  <text x="95" y="411" class="body">Пусть lim xₙ=A. Возьмём произвольное ε&gt;0 и по определению предела выберем N так, чтобы</text>
+  <text x="95" y="449" class="formula">n&gt;N  ⇒  |xₙ−A|&lt;ε/2.</text>
+  <text x="95" y="488" class="body">Если m&gt;N и n&gt;N, то по неравенству треугольника</text>
+  <text x="95" y="527" class="formula blue">|xₘ−xₙ| = |(xₘ−A)+(A−xₙ)| ≤ |xₘ−A|+|xₙ−A| &lt; ε/2+ε/2=ε.</text>
+  <text x="95" y="565" class="small">Значит, для любых двух членов достаточно позднего хвоста расстояние меньше ε: это определение фундаментальности.</text>
+  <text x="95" y="604" class="small">На числовой прямой оба члена лежат внутри интервала длины ε вокруг A.</text>
+  <!-- The interval has endpoints A-epsilon/2 and A+epsilon/2, so its length is epsilon. -->
+  <rect x="490" y="625" width="720" height="54" rx="12" fill="#e7f2f8" stroke="#1976a5" stroke-width="2"/>
+  <line x1="490" y1="611" x2="490" y2="694" stroke="#1976a5" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="1210" y1="611" x2="1210" y2="694" stroke="#1976a5" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="850" y1="608" x2="850" y2="697" stroke="#24344d" stroke-width="3"/>
+  <line x1="430" y1="652" x2="1320" y2="652" class="axis" marker-end="url(#arrow)"/>
+  <circle cx="740" cy="652" r="8" fill="#1976a5"/><circle cx="1025" cy="652" r="8" fill="#1976a5"/>
+  <text x="490" y="722" text-anchor="middle" class="small">A−ε/2</text>
+  <text x="740" y="640" text-anchor="middle" class="tiny blue">xₘ</text>
+  <text x="850" y="722" text-anchor="middle" class="small">A</text>
+  <text x="1025" y="640" text-anchor="middle" class="tiny blue">xₙ</text>
+  <text x="1210" y="722" text-anchor="middle" class="small">A+ε/2</text>
+  <text x="1325" y="658" class="tiny">ℝ</text>
+
+  <rect x="60" y="785" width="1680" height="610" rx="18" class="card"/>
+  <text x="95" y="830" class="head green">II. Фундаментальная последовательность сходится</text>
+  <text x="95" y="871" class="body">Пусть {xₙ} фундаментальна. По заданному ε&gt;0 найдём N так, что из m≥N и k≥N следует</text>
+  <text x="95" y="909" class="formula green">|xₘ−xₖ| &lt; ε/3.  (условие Коши)</text>
+  <text x="95" y="945" class="small">Если определение записано с m,k&gt;N₀, переобозначаем порог N=N₀+1; далее, как у Зорича, пишем m,k≥N.</text>
+  <text x="95" y="981" class="body">Фиксируем m=N. Для каждого k&gt;N из условия Коши получаем (1):</text>
+  <text x="95" y="1019" class="formula green">x_N−ε/3 &lt; xₖ &lt; x_N+ε/3.     (1)</text>
+  <!-- Tail values are trapped around the fixed term x_N. -->
+  <rect x="430" y="1052" width="600" height="58" rx="11" fill="#e8f4ed" stroke="#21845b" stroke-width="2"/>
+  <line x1="430" y1="1040" x2="430" y2="1124" stroke="#21845b" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="1030" y1="1040" x2="1030" y2="1124" stroke="#21845b" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="730" y1="1036" x2="730" y2="1128" stroke="#21845b" stroke-width="3"/>
+  <line x1="360" y1="1081" x2="1110" y2="1081" class="axis" marker-end="url(#arrow)"/>
+  <circle cx="510" cy="1081" r="8" fill="#21845b"/><circle cx="650" cy="1081" r="8" fill="#21845b"/>
+  <circle cx="730" cy="1081" r="8" fill="#1976a5"/><circle cx="970" cy="1081" r="8" fill="#21845b"/>
+  <circle cx="875" cy="1081" r="13" fill="#fff" stroke="#bd6a12" stroke-width="4"/><circle cx="875" cy="1081" r="6" fill="#21845b"/>
+  <line x1="875" y1="1054" x2="875" y2="1067" stroke="#bd6a12" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="875" y="1048" text-anchor="middle" class="body green" font-weight="700">xₖ</text>
+  <text x="430" y="1152" text-anchor="middle" class="small">x_N−ε/3</text><text x="730" y="1152" text-anchor="middle" class="small green">x_N</text><text x="1030" y="1152" text-anchor="middle" class="small">x_N+ε/3</text>
+  <text x="1160" y="1057" class="small green">Весь хвост k&gt;N</text>
+  <text x="1160" y="1088" class="small">лежит в одном</text>
+  <text x="1160" y="1119" class="small">ограниченном интервале.</text>
+  <text x="1160" y="1150" class="tiny green">Отмеченная точка — xₖ из хвоста.</text>
+
+  <line x1="95" y1="1180" x2="1700" y2="1180" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="95" y="1220" class="body">По (1), для k&gt;N имеем |xₖ|&lt;|x_N|+ε/3. Первые N членов x₁,…,x_N — конечное множество.</text>
+  <text x="95" y="1258" class="formula">M₀=max{|x₁|,…,|x_N|},     M=max{M₀, |x_N|+ε/3}  ⇒  |xₖ|≤M для всех k.</text>
+  <text x="95" y="1298" class="small">Так доказана ограниченность всей последовательности: и конечного начала, и ограниченного хвоста.</text>
+  <text x="95" y="1350" class="tiny">В доказательстве Зорича это предварительный шаг: он нужен, чтобы следующие inf Tₙ и sup Tₙ были конечными.</text>
+
+  <rect x="60" y="1415" width="1680" height="560" rx="18" class="card"/>
+  <text x="95" y="1460" class="head">II.1. Строим отрезки из хвостов и находим общую точку</text>
+  <text x="95" y="1502" class="formula">Tₙ={xₖ:k≥n},     aₙ=inf Tₙ,     bₙ=sup Tₙ,     Iₙ=[aₙ,bₙ].</text>
+  <text x="95" y="1541" class="small">Поскольку вся последовательность ограничена, aₙ и bₙ конечны. При Tₙ₊₁⊂Tₙ нижняя грань не убывает, верхняя не возрастает:</text>
+  <text x="95" y="1578" class="formula blue">aₙ≤aₙ₊₁≤bₙ₊₁≤bₙ,     поэтому     Iₙ₊₁⊂Iₙ.</text>
+  <text x="95" y="1614" class="small">Схема вложенности отрезков (расположение условное, не в числовом масштабе):</text>
+  <!-- Schematic nested intervals. A belongs to each interval; endpoints are distinct in the general proof. -->
+  <line x1="180" y1="1700" x2="1515" y2="1700" class="axis" marker-end="url(#arrow)"/>
+  <line x1="380" y1="1650" x2="1390" y2="1650" stroke="#a9becd" stroke-width="12" stroke-linecap="round"/>
+  <line x1="500" y1="1684" x2="1230" y2="1684" stroke="#1976a5" stroke-width="12" stroke-linecap="round"/>
+  <line x1="625" y1="1718" x2="1050" y2="1718" stroke="#21845b" stroke-width="12" stroke-linecap="round"/>
+  <line x1="380" y1="1634" x2="380" y2="1667" stroke="#24344d" stroke-width="2"/><line x1="1390" y1="1634" x2="1390" y2="1667" stroke="#24344d" stroke-width="2"/>
+  <line x1="500" y1="1668" x2="500" y2="1701" stroke="#24344d" stroke-width="2"/><line x1="1230" y1="1668" x2="1230" y2="1701" stroke="#24344d" stroke-width="2"/>
+  <line x1="625" y1="1702" x2="625" y2="1735" stroke="#24344d" stroke-width="2"/><line x1="1050" y1="1702" x2="1050" y2="1735" stroke="#24344d" stroke-width="2"/>
+  <line x1="800" y1="1628" x2="800" y2="1745" stroke="#b53b45" stroke-width="3" stroke-dasharray="7 6"/>
+  <circle cx="930" cy="1718" r="7" fill="#24344d"/>
+  <text x="380" y="1636" text-anchor="middle" class="tiny muted">a₁</text><text x="1390" y="1636" text-anchor="middle" class="tiny muted">b₁</text>
+  <text x="500" y="1670" text-anchor="middle" class="tiny blue">a₂</text><text x="1230" y="1670" text-anchor="middle" class="tiny blue">b₂</text>
+  <text x="625" y="1704" text-anchor="middle" class="tiny green">a₃</text><text x="1050" y="1704" text-anchor="middle" class="tiny green">b₃</text>
+  <text x="335" y="1656" text-anchor="end" class="small muted">I₁</text><text x="455" y="1690" text-anchor="end" class="small blue">I₂</text><text x="580" y="1724" text-anchor="end" class="small green">I₃</text>
+  <text x="800" y="1764" text-anchor="middle" class="small red">A</text><text x="950" y="1743" class="tiny">xₖ</text>
+  <text x="95" y="1805" class="formula">По лемме о вложенных отрезках найдётся A∈⋂ₙIₙ; значит, aₙ≤A≤bₙ для каждого n.</text>
+  <text x="95" y="1844" class="body">Если k≥n, то xₖ∈Tₙ, следовательно, aₙ≤xₖ≤bₙ. Поэтому</text>
+  <text x="95" y="1883" class="formula blue">|A−xₖ|≤bₙ−aₙ, если k≥n.     (2)</text>
+  <text x="95" y="1932" class="small">Все нужные объекты отмечены: хвост Tₙ, его грани aₙ,bₙ, отрезок Iₙ, общая точка A и член хвоста xₖ.</text>
+
+  <rect x="60" y="1995" width="1680" height="410" rx="18" class="card"/>
+  <text x="95" y="2040" class="head green">II.2. Ширина отрезков даёт определение предела</text>
+  <text x="95" y="2080" class="body">Для того же ε и n&gt;N все члены хвоста Tₙ удовлетворяют (1). Поэтому его infimum и supremum лежат между теми же границами:</text>
+  <text x="95" y="2120" class="formula">x_N−ε/3≤aₙ≤bₙ≤x_N+ε/3.</text>
+  <text x="95" y="2159" class="formula green">bₙ−aₙ≤2ε/3&lt;ε.     (3)</text>
+  <text x="95" y="2200" class="body">Теперь для любого k&gt;N берём n=k. Тогда k≥n, xₖ∈Tₖ, и из (2),(3):</text>
+  <text x="95" y="2240" class="formula blue">|A−xₖ|≤bₖ−aₖ≤2ε/3&lt;ε.</text>
+  <text x="95" y="2280" class="body">Так как ε&gt;0 было произвольным, для найденного A выполнено определение предела:</text>
+  <text x="95" y="2330" class="formula green" font-weight="700">limₖ→∞ xₖ=A.</text>
+  <text x="95" y="2375" class="small">Вместе с направлением I доказано: последовательность сходится ⇔ она фундаментальна.</text>
+
+  <rect x="60" y="2425" width="1680" height="480" rx="18" class="card"/>
+  <text x="95" y="2470" class="head">Два примера</text>
+  <rect x="85" y="2495" width="1000" height="380" rx="14" fill="#f5f9fc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="115" y="2537" class="body" font-weight="700">1. xₙ=1+1/n сходится к 1 и фундаментальна</text>
+  <text x="115" y="2577" class="formula">|xₘ−xₖ|=|1/m−1/k|≤1/m+1/k&lt;2/N</text>
+  <text x="115" y="2614" class="small">при m,k&gt;N; выберем N&gt;2/ε. Тогда |xₘ−xₖ|&lt;ε.</text>
+  <text x="115" y="2650" class="small">Её хвостовые отрезки: I₁=[1,2], I₂=[1,3/2], I₃=[1,4/3]; A=1.</text>
+  <!-- Exact numerical scale for the three example intervals: x=360 at 1, 760 at 2. -->
+  <line x1="280" y1="2820" x2="925" y2="2820" class="axis" marker-end="url(#arrow)"/>
+  <line x1="360" y1="2690" x2="760" y2="2690" stroke="#a9becd" stroke-width="10" stroke-linecap="round"/>
+  <line x1="360" y1="2720" x2="560" y2="2720" stroke="#1976a5" stroke-width="10" stroke-linecap="round"/>
+  <line x1="360" y1="2750" x2="493.33" y2="2750" stroke="#21845b" stroke-width="10" stroke-linecap="round"/>
+  <line x1="360" y1="2678" x2="360" y2="2830" stroke="#b53b45" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="493.33" y1="2741" x2="493.33" y2="2828" stroke="#24344d" stroke-width="2"/><line x1="560" y1="2711" x2="560" y2="2828" stroke="#24344d" stroke-width="2"/><line x1="760" y1="2681" x2="760" y2="2828" stroke="#24344d" stroke-width="2"/>
+  <text x="345" y="2695" text-anchor="end" class="tiny muted">I₁</text><text x="345" y="2725" text-anchor="end" class="tiny blue">I₂</text><text x="345" y="2755" text-anchor="end" class="tiny green">I₃</text>
+  <text x="360" y="2848" text-anchor="middle" class="tiny red">1=A</text><text x="493.33" y="2848" text-anchor="middle" class="tiny">4/3</text><text x="560" y="2848" text-anchor="middle" class="tiny">3/2</text><text x="760" y="2848" text-anchor="middle" class="tiny">2</text>
+
+  <rect x="1110" y="2495" width="605" height="380" rx="14" fill="#fff8f2" stroke="#e6c9ad" stroke-width="2"/>
+  <text x="1140" y="2537" class="body" font-weight="700">2. xₙ=(−1)ⁿ не фундаментальна</text>
+  <text x="1140" y="2585" class="formula">Возьмём ε=1.</text>
+  <text x="1140" y="2625" class="body">При любом N выберем</text>
+  <text x="1140" y="2665" class="formula">m=N+1,  k=N+2.</text>
+  <text x="1140" y="2705" class="formula red">|xₘ−xₖ|=2≥1=ε.</text>
+  <text x="1140" y="2750" class="small">Условие Коши нарушено при каждом N;</text>
+  <text x="1140" y="2782" class="small">значит, последовательность не сходится.</text>
+  <text x="95" y="2890" class="tiny">Примеры иллюстрируют теорему; доказательство общего утверждения дано выше по шагам Зорича.</text>
+</svg>
